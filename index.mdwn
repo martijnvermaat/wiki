@@ -3,5 +3,7 @@ All wikis are supposed to have a [[SandBox]], so this one does too.
 
 Hier een niewe [[test]].
 
+We voegen nog een regel toe om SVN te testen.
+
 ----
 This wiki is powered by [ikiwiki](http://ikiwiki.info).
