@@ -1,0 +1,21 @@
+Incompleteness proof based on truth sets.
+
+Popular version of Tarski's Theorem:
+> Truth (within the system) is not definable (within the system) (for systems of sufficient strength)
+
+Precise version:
+
+For any language L, if
+
+* for any set A expressible in L, the set A* is expressible in L, and
+* for any set A expressible in L, the complement of A is expressible in L, then
+
+the set T of Goedel numbers of the true sentences of L is not expressible in L.
+
+(Where A* is the set of all n with d(n) in A and d the diagonal function).
+
+Now, consider PA. For any set Arithmetic set A (Arithmetic = expressible in PA), A* and the complement of A are also Arithmetic. Tarski's Theorem tells us that the set T of Goedel numbers of true arithmetic sentences is not Arithmetic.
+
+However, the set P of Goedel numbers of provable arithmetic sentences (provable in PA) is Arithmetic.
+
+We conclude that T and P don't coincide. Assuming consistency of PA, there must be a true arithmetic sentence which is not provable in PA. This sentence is also not disprovable (again, by the consistency assumption), so PA is incomplete.
