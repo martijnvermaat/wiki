@@ -12,7 +12,12 @@ For any language L, if
 
 the set T of Goedel numbers of the true sentences of L is not expressible in L.
 
-(Where A* is the set of all n with d(n) in A and d the diagonal function).
+(Where A* is the set of all n with d(n) in A and d the [[diagonal_function]]).
+
+[[toggle id=tarski text="Proof"]]
+[[toggleable id=tarski text="""
+Assume hypotheses. If the set T were expressible in L, also the complement of T would be expressible in L and thus a [[Goedel sentence|goedel_sentence]] for the complement of T would exist ([[diagonal_lemma]]). But trivially, this Goedel sentence cannot exist (it would be true iff it were not true).
+"""]]
 
 Now, consider PA. For any set Arithmetic set A (Arithmetic = expressible in PA), A* and the complement of A are also Arithmetic. Tarski's Theorem tells us that the set T of Goedel numbers of true arithmetic sentences is not Arithmetic.
 
