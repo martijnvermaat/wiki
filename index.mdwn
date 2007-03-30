@@ -1,9 +1,8 @@
-Welcome to [[Martijn|martijn]'s new wiki.
-All wikis are supposed to have a [[SandBox]], so this one does too.
-
-Hier een niewe [[test]].
+Welcome to [[Martijn|martijn]]'s new wiki.
 
 Bachelor project: [[incompleteness]]
+
+All wikis are supposed to have a [[SandBox]], so this one does too.
 
 ----
 This wiki is powered by [ikiwiki](http://ikiwiki.info).
