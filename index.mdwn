@@ -1,4 +1,4 @@
-Welcome to Martijn's new wiki.
+Welcome to [[Martijn|martijn]'s new wiki.
 All wikis are supposed to have a [[SandBox]], so this one does too.
 
 Hier een niewe [[test]].
