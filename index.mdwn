@@ -2,8 +2,6 @@ Welcome to [[Martijn|martijn]]'s new wiki.
 
 Bachelor project: [[incompleteness]]
 
-Notes:
-
 * [[subversion]]
 * [[ssh_through_nat]]
 * [[convert_multimedia]]
