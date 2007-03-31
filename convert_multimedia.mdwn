@@ -1,0 +1,8 @@
+# WMA to WAV
+
+Convert all WMA files in this directory to WAV files:
+
+        for i in *.wma; do
+          mplayer -vc null -vo null -ao pcm:waveheader "$i";
+          mv audiodump.wav "`basename "$i" .wma`.wav";
+        done;
