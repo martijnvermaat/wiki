@@ -8,7 +8,6 @@ Here's another one with *emphasised* text.
 
 # Header
 
-test nbog een test jaja
 
 ## Subheader
 
