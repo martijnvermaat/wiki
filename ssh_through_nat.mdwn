@@ -1,0 +1,13 @@
+We have a machine 'client' behind a NAT firewall and a machine 'server' to which we can directly connect. We want to connect from 'server' to 'basement'.
+
+For this purpose, we created the user 'natuser' on 'server' (but of course we could do with any existing user).
+
+On 'client':
+
+        $ ssh -R 2022:localhost:22 natuser@server 'while :; do sleep 86400; done'
+
+On 'server':
+
+        $ ssh -p 2022 localhost
+
+From <http://www.linuxgazette.com/node/2248>
