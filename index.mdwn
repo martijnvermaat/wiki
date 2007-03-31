@@ -2,7 +2,7 @@ Welcome to [[Martijn|martijn]]'s new wiki.
 
 Bachelor project: [[incompleteness]]
 
-Notes: [[subversion]] [[ssh_through_nat]]
+Notes: [[subversion]] [[ssh_through_nat]] [[convert]]
 
 All wikis are supposed to have a [[SandBox]], so this one does too.
 
