@@ -2,12 +2,9 @@ Instructions for install VMWare Tools on an Ubuntu guest OS (on VMWare Player).
 
 Get VMWare Tools from the VMWare Workstation image. For now (Ubuntu Dapper) a patch is needed.
 
-* [Installing VMware Tools with VMware Player](http://www.brandonhutchinson.com/Installing_VMware_Tools_with_VMware_Player.html)
-* [Patch for VMWare Tools on Ubuntu]([http://paradiz.free.fr/vmwaretools/)
-
         apt-get install build-essential linux-headers-`uname -r`
 
-Get [VMware Workstation](http://www.vmware.com/download) for Linux.
+Get VMware Workstation for Linux.
 
         tar -ztvf VMware-works....tar.gz | grep -i linux.iso
         tar -zxvf VMware-works....tar.gz vmware-distrib/.../linux.iso
@@ -33,3 +30,7 @@ To use the VMWare mouse driver:
         perl -p -i.bak -e 's/\"mouse\"/\"vmmouse\"/' /etc/X11/xorg.conf
 
 (The patch doesn't seem to be up-to-date with the current vmware-config-tools.pl unfortunately.)
+
+* [Installing VMware Tools with VMware Player](http://www.brandonhutchinson.com/Installing_VMware_Tools_with_VMware_Player.html)
+* [Patch for VMWare Tools on Ubuntu]([http://paradiz.free.fr/vmwaretools/)
+* [VMware Workstation](http://www.vmware.com/download)
