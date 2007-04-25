@@ -27,3 +27,9 @@ We could also just drop the 'wiki' prefix from all paths. Rename Node-path and N
         Content-length: 0
 
 From [Version Control with Subversion: Repository Maintenance](http://svnbook.red-bean.com/en/1.2/svn.reposadmin.maint.html#svn.reposadmin.maint.tk.svndumpfilter)
+
+# Automated backups
+
+Make daily, weekly and monthly backups on the repository server with 'svnadmin dump'.
+
+Use rsync to sync an offline backup with the latest daily backup on the repository server.
