@@ -42,3 +42,5 @@ to which user 'thomas' can attach read-only:
 User 'thomas' can now:
 
         $ screen -x martijn/testsession
+
+Source: [OSAF: Gnu Screen](http://wiki.osafoundation.org/bin/view/Jungle/GnuScreen)
