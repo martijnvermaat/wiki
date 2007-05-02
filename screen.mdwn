@@ -14,7 +14,7 @@ Reattach a screen session:
 
 Reattach an attached (multi-user) screen session:
 
-        screen -r user[/session]
+        screen -x user[/session]
 
 To enter a screen command:
 
