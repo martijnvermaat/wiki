@@ -4,10 +4,6 @@ Screen key-binding:
 
         Ctrl-a
 
-To enter a screen command:
-
-        Ctrl-a :
-
 Detach a screen session:
 
         Ctrl-a d
@@ -19,6 +15,14 @@ Reattach a screen session:
 Reattach an attached (multi-user) screen session:
 
         screen -r user[/session]
+
+To enter a screen command:
+
+        Ctrl-a :
+
+Example:
+
+        Ctrl-a :sessionname testname
 
 # Multi-user screen
 
