@@ -1,0 +1,40 @@
+# Quick reference
+
+Screen key-binding:
+
+        Ctrl-a
+
+To enter a screen command:
+
+        Ctrl-a :
+
+Detach a screen session:
+
+        Ctrl-a d
+
+Reattach a screen session:
+
+        screen -r [session]
+
+Reattach an attached (multi-user) screen session:
+
+        screen -r user[/session]
+
+# Multi-user screen
+
+Screen needs to be run as setuid root to be able to share
+screens between different users. On Debian, screen is not
+setup like that by default, chmod u+x screen to 'fix' this,
+and revert afterwards.
+
+An example where user 'martijn' creates a screen session with name 'testsession'
+to which user 'thomas' can attach read-only:
+
+        $ screen -S testsession
+        Ctrl-a :multiuser on
+        Ctrl-a :writelock on
+        Ctrl-a :acladd otheruser
+
+User 'thomas' can now:
+
+        $ screen -x martijn/testsession
