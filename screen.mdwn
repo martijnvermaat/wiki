@@ -24,7 +24,7 @@ Example:
 
         Ctrl-a :sessionname testname
 
-# Windows
+# Screen windows
 
 Create a new window:
 
