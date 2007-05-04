@@ -24,6 +24,24 @@ Example:
 
         Ctrl-a :sessionname testname
 
+# Windows
+
+Create a new window:
+
+        Ctrl-a c
+
+Window list:
+
+        Ctrl-a "
+
+Next/Previous window:
+
+        Ctrl-a n / Ctrl-a p
+
+Set window title:
+
+        Ctrl-a :title testtitle
+
 # Multi-user screen
 
 Screen needs to be run as setuid root to be able to share
