@@ -33,6 +33,33 @@ Encrypted filesystems would be nice. Not configured at this point.
 The Ubuntu installer (as of Ubuntu Edgy Eft 6.10) has no support for dm-crypt,
 so it is a pain to setup an encrypted / and swap (i.e. everything but /boot).
 
+## Installing Ubuntu
+
+Use the MacOS X installation DVD to change the partition table from GUID to
+msdos. After this we are ready to boot the Ubuntu alternate installation CD.
+
+Boot installtion in expert mode. To have a working keyboard and a booting kernel,
+use these parameters:
+
+    noapic acpi=force irqpoll
+
+Kernel panics appear to be very common on the MacBook's dual core. See [this page])http://blog.mobiledude.com/articles/2006/08/20/apple-macbook-dual-booting-ubuntu-linux hier):
+
+> One last thing to note is that Linux will often produce a kernel panic during
+boot. This is due to an APIC timing problem. If you reboot, normally the timing
+problem goes away (you may have to reboot more than once). A more permanent
+solution is to recompile the kernel to use a timing frequency of 1000Hz instead
+of 250Hz, but I will leave the details of that process as an exercise for the
+reader (hint: comment #152 on [this page](http://bin-false.org/?p=17) has some
+pointers).
+
+See also [bug #54621](https://launchpad.net/distros/ubuntu/+bug/54621) for a
+possible solution.
+
+So far, this parameter seems to work:
+
+    lpj=8000000
+
 
 # User configuration
 
