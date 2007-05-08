@@ -9,6 +9,6 @@ Bachelor project: [[incompleteness]]
 * [[vmware_tools]]
 * [[macbook]]
 
-All wikis are supposed to have a [[SandBox]], so this one does too.
+All wikis are supposed to have a [[sandbox]], so this one does too.
 
 This wiki is powered by [ikiwiki](http://ikiwiki.info) :-)
