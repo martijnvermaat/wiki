@@ -1,0 +1,39 @@
+Some notes on Lennert's MacBook.
+
+# Hardware
+
+Apple MacBook (first generation):
+
+* 13.3" met 1280x800 resolutie
+* Intel Core Duo 1.83 GHz
+* 1 GB 667-MHz DDR2 SDRAM
+* Intel GMA 950 videokaart
+* 5400 RPM SATA harddisk van 60 GB
+* dvd-rom/cd-rw combo
+* AirPort Extreme Wireless
+* iSight Camera
+* Apple Remote
+
+# General configuration
+
+Main OS is Ubuntu Feisty Fawn 7.04. Keep MacOSX as alternative boot option for
+firmware updates.
+
+# Operating system configuration
+
+
+
+# User configuration
+
+## Mail
+
+Use XS4ALL spam filter to gain 500MB of space on the mail server. Push old XS4ALL
+mailbox from Thunderbird to the mail server via IMAP.
+
+Evolution with [XS4ALL mail via IMAP](http://www.xs4all.nl/helpdesk/software/email/imap/)
+(with IMAP IDLE) and [Solis-mail via IMAP](http://www.uu.nl/uupublish/homeuu/diensten/homeubend/universitairebes/bestuursdienst/directieinformat/watwedoen/solismailvoorstu/imapclient/17776main.html) Solis-mail via IMAP]. Use Evolution Bogofilter plugin for local spam filtering.
+
+Warande uses [SSHUnet](http://www.sshunet.nl/mailrelays.html) which blocks port
+25, so using smtp.sshunet.nl is mandatory. Unfortunately, smtp.sshunet is of
+course blocked from outside SSHUnet, so on other locations smtp.xs4all.nl has to
+be used (with authentication).
