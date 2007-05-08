@@ -1,5 +1,6 @@
 Some notes on Lennert's MacBook.
 
+
 # Hardware
 
 Apple MacBook (first generation):
@@ -14,13 +15,33 @@ Apple MacBook (first generation):
 * iSight Camera
 * Apple Remote
 
+
 # General configuration
 
 Main OS is Ubuntu Feisty Fawn 7.04. Keep MacOSX as alternative boot option for
 firmware updates.
 
-# Operating system configuration
 
+# System configuration
+
+## Security
+
+Use [Arno's IPTables firewall](http://rocky.molphys.leidenuniv.nl/).
+
+Encrypted filesystems would be nice. Not configured at this point.
+
+The Ubuntu installer (as of Ubuntu Edgy Eft 6.10) has no support for dm-crypt,
+so it is a pain to setup an encrypted / and swap (i.e. everything but /boot).
+
+ * [Encrypted Filesystem](https://help.ubuntu.com/community/EncryptedFilesystem)
+ * [Encrypted Filesystem Howto](https://help.ubuntu.com/community/EncryptedFilesystemHowto)
+ * [Encrypted Filesystem Howto 2](https://help.ubuntu.com/community/EncryptedFilesystemHowto2)
+ * [Encrypted Filesystem Howto 3](https://help.ubuntu.com/community/EncryptedFilesystemHowto3)
+ * [Encrypted Filesystem Howto 4](https://help.ubuntu.com/community/EncryptedFilesystemHowto4)
+ * [Encrypted Filesystem Howto 5](https://help.ubuntu.com/community/EncryptedFilesystemHowto5)
+ * [Encrypted Filesystem LVM Howto](https://help.ubuntu.com/community/EncryptedFilesystemLVMHowto)
+ * [Benchmarking dm-crypt](http://www.hermann-uwe.de/blog/benchmarking-an-encrypted-dm-crypt-lvm-ext3-selinux-hard-drive-with-bonnie-and-hdparm)
+ * [Disk encryption support in Etc](http://changelog.complete.org/posts/541-Disk-encryption-support-in-Etch.html)
 
 
 # User configuration
