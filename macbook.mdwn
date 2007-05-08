@@ -75,8 +75,8 @@ Use some sort of rsync script to backup home directory and /etc to remote storag
 ## Ubuntu bugs
 
 * [#61223: macbook trackpad support](https://launchpad.net/distros/ubuntu/+source/linux-source-2.6.17/+bug/61223)
-* [#61500: macbook ir support]](https://launchpad.net/distros/ubuntu/+source/linux-source-2.6.17/+bug/61500)
-* [#61502: macbook backlight support]](https://launchpad.net/distros/ubuntu/+source/linux-source-2.6.17/+bug/61502)
+* [#61500: macbook ir support](https://launchpad.net/distros/ubuntu/+source/linux-source-2.6.17/+bug/61500)
+* [#61502: macbook backlight support](https://launchpad.net/distros/ubuntu/+source/linux-source-2.6.17/+bug/61502)
 * [#59947: False compositing activation](https://launchpad.net/distros/ubuntu/+source/metacity/+bug/59947)
 * [#52852: MacBook gets extremely hot under Linux](https://launchpad.net/distros/ubuntu/+source/linux-source-2.6.15/+bug/52852)
 * [#9870: Better spam filtering for Evolution](https://launchpad.net/distros/ubuntu/+source/evolution/+bug/9870)
