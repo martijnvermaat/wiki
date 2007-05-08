@@ -43,7 +43,7 @@ use these parameters:
 
     noapic acpi=force irqpoll
 
-Kernel panics appear to be very common on the MacBook's dual core. See [this page])http://blog.mobiledude.com/articles/2006/08/20/apple-macbook-dual-booting-ubuntu-linux hier):
+Kernel panics appear to be very common on the MacBook's dual core. See [this page](http://blog.mobiledude.com/articles/2006/08/20/apple-macbook-dual-booting-ubuntu-linux hier):
 
 > One last thing to note is that Linux will often produce a kernel panic during
 boot. This is due to an APIC timing problem. If you reboot, normally the timing
@@ -59,6 +59,34 @@ possible solution.
 So far, this parameter seems to work:
 
     lpj=8000000
+
+Choose manual partitioning. Remove all partitions. Add a 250MB ext3 /boot partition.
+The rest is for LVM. In the LVM group create an 8GB ext3 / partition (lvm-root),
+a 1.5GB swap partition (lvm-swap) end use the remaining space for an ext3
+partition (lvm-home). Mount lvm-home at /home.
+
+## Wireless networking
+
+The network-manager package is installed by default since Ubuntu Feisty and it will
+work fine with the Intel chipset.
+
+WPA keys are stored in gnome-keyring-manager, which is password-protected. This is
+kind of annoying, but there exists some dirty workaround for entering your password
+twice every time (uses pam-keyring, yet to investigate).
+
+## iSight
+
+We follow [this page](http://www.ubuntuforums.org/showthread.php?t=225621) which
+describes how to use [this driver](http://blogs.gnome.org/view/rbultje/2006/07/21/0).
+
+Install module-assistant and debhelper. Install linux-uvc-source from [here](http://packages.debian.org/unstable/graphics/linux-uvc-source)
+and make the module with:
+
+    sudo m-a prepare
+    sudo m-a a-i linux-uvc
+
+After this, install linux-uvc-tools from [here](http://packages.debian.org/unstable/graphics/linux-uvc-tools).
+At this point we need the firmware from a MacOS X installation which was hosed when writing this.
 
 
 # User configuration
@@ -79,6 +107,20 @@ be used (with authentication).
 ## Backup
 
 Use some sort of rsync script to backup home directory and /etc to remote storage.
+
+## DVD playback
+
+Probably use libdvdcss2 and regionset.
+
+
+# Open issues
+
+* VMWare Player installation fails due to networking problems I still have to
+investigate
+* iSight camera
+* Remote control
+* The laptop gets very hot (power management seems somewhat broken)
+* Suspend
 
 
 # Links
