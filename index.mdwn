@@ -11,5 +11,4 @@ Bachelor project: [[incompleteness]]
 
 All wikis are supposed to have a [[SandBox]], so this one does too.
 
-----
-This wiki is powered by [ikiwiki](http://ikiwiki.info).
+This wiki is powered by [ikiwiki](http://ikiwiki.info) :-)
