@@ -33,16 +33,6 @@ Encrypted filesystems would be nice. Not configured at this point.
 The Ubuntu installer (as of Ubuntu Edgy Eft 6.10) has no support for dm-crypt,
 so it is a pain to setup an encrypted / and swap (i.e. everything but /boot).
 
- * [Encrypted Filesystem](https://help.ubuntu.com/community/EncryptedFilesystem)
- * [Encrypted Filesystem Howto](https://help.ubuntu.com/community/EncryptedFilesystemHowto)
- * [Encrypted Filesystem Howto 2](https://help.ubuntu.com/community/EncryptedFilesystemHowto2)
- * [Encrypted Filesystem Howto 3](https://help.ubuntu.com/community/EncryptedFilesystemHowto3)
- * [Encrypted Filesystem Howto 4](https://help.ubuntu.com/community/EncryptedFilesystemHowto4)
- * [Encrypted Filesystem Howto 5](https://help.ubuntu.com/community/EncryptedFilesystemHowto5)
- * [Encrypted Filesystem LVM Howto](https://help.ubuntu.com/community/EncryptedFilesystemLVMHowto)
- * [Benchmarking dm-crypt](http://www.hermann-uwe.de/blog/benchmarking-an-encrypted-dm-crypt-lvm-ext3-selinux-hard-drive-with-bonnie-and-hdparm)
- * [Disk encryption support in Etc](http://changelog.complete.org/posts/541-Disk-encryption-support-in-Etch.html)
-
 
 # User configuration
 
@@ -58,3 +48,69 @@ Warande uses [SSHUnet](http://www.sshunet.nl/mailrelays.html) which blocks port
 25, so using smtp.sshunet.nl is mandatory. Unfortunately, smtp.sshunet is of
 course blocked from outside SSHUnet, so on other locations smtp.xs4all.nl has to
 be used (with authentication).
+
+## Backup
+
+Use some sort of rsync script to backup home directory and /etc to remote storage.
+
+
+# Links
+
+## Ubuntu on MacBook
+
+* [Ubuntu Dapper on the MacBook](http://desrt.mcmaster.ca/macbook.xhtml)
+* [Installing Ubuntu Linux on a MacBook (Dual Boot)](http://bin-false.org/?p=17)
+* [Ubuntu Linux Installing on an iNtel Macintosh](http://www.planetisaac.com/articles/ubuntuinstall.html)
+* [Ubuntu on MacBook Pro](http://www.ubuntuforums.org/showthread.php?t=198453&highlight=macbook)
+* [HOWTO: Install Ubuntu on a MacBook and use GRUB to boot](http://www.ubuntuforums.org/showthread.php?t=233243)
+* [macbook pro: fedora 6 vs edgy](http://ubuntuforums.org/showthread.php?t=255068)
+* [Dual-booting Mac OS X and Ubuntu on an Apple MacBook laptop](http://www.xs4all.nl/~hajk/mbook-install.pdf) (PDF)
+* [Ubuntu Forums - Feisty on a macbook](http://www.ubuntuforums.org/showthread.php?t=346767)
+
+## Linux on MacBook
+
+* [Mactel-Linux](http://www.mactel-linux.org/wiki/Main_Page)
+* [MacBook - Debian Wiki](http://wiki.debian.org/MacBook)
+
+## Ubuntu bugs
+
+* [#61223: macbook trackpad support](https://launchpad.net/distros/ubuntu/+source/linux-source-2.6.17/+bug/61223)
+* [#61500: macbook ir support]](https://launchpad.net/distros/ubuntu/+source/linux-source-2.6.17/+bug/61500)
+* [#61502: macbook backlight support]](https://launchpad.net/distros/ubuntu/+source/linux-source-2.6.17/+bug/61502)
+* [#59947: False compositing activation](https://launchpad.net/distros/ubuntu/+source/metacity/+bug/59947)
+* [#52852: MacBook gets extremely hot under Linux](https://launchpad.net/distros/ubuntu/+source/linux-source-2.6.15/+bug/52852)
+* [#9870: Better spam filtering for Evolution](https://launchpad.net/distros/ubuntu/+source/evolution/+bug/9870)
+* [Bugs tagged 'macbook'](https://launchpad.net/ubuntu/+bugs?field.tag=macbook)
+
+## Encrypted filesystem
+
+* [Encrypted Filesystem](https://help.ubuntu.com/community/EncryptedFilesystem)
+* [Encrypted Filesystem Howto](https://help.ubuntu.com/community/EncryptedFilesystemHowto)
+* [Encrypted Filesystem Howto 2](https://help.ubuntu.com/community/EncryptedFilesystemHowto2)
+* [Encrypted Filesystem Howto 3](https://help.ubuntu.com/community/EncryptedFilesystemHowto3)
+* [Encrypted Filesystem Howto 4](https://help.ubuntu.com/community/EncryptedFilesystemHowto4)
+* [Encrypted Filesystem Howto 5](https://help.ubuntu.com/community/EncryptedFilesystemHowto5)
+* [Encrypted Filesystem LVM Howto](https://help.ubuntu.com/community/EncryptedFilesystemLVMHowto)
+* [Benchmarking dm-crypt](http://www.hermann-uwe.de/blog/benchmarking-an-encrypted-dm-crypt-lvm-ext3-selinux-hard-drive-with-bonnie-and-hdparm)
+* [Disk encryption support in Etc](http://changelog.complete.org/posts/541-Disk-encryption-support-in-Etch.html)
+
+## iSight
+
+* [Updated Linux driver for the Apple iSight](http://blogs.gnome.org/view/rbultje/2006/09/21/0)
+* [Built-in iSight Howto, Intel Mac (iMac, MacBook)](http://www.ubuntuforums.org/showthread.php?t=225621)
+* [MacBook iSight](http://johannes.sipsolutions.net/MacBook/iSight)
+* [iSight video opnemen](http://www.netfort.gr.jp/~dancer/diary/daily/2007-Jan-22.html.en#2007-Jan-22-00:57:28)
+
+## Misc hardware
+
+* [Disable Touchpad Temporarily When Typing](http://ubuntu.wordpress.com/2006/09/20/disable-touchpad-temporarily-when-typing/)
+* [MacBook: Control the brightness by a key](http://ubuntuforums.org/showthread.php?t=215801)
+* [SMC Firmware Update](http://www.apple.com/downloads/macosx/apple/macbooksmcfirmwareupdate.html) (better fan policy for cooling)
+* [gpomme handles the hotkeys](http://packages.ubuntu.com/feisty/utils/gpomme)
+
+## Unsorted
+
+* [Towards a moderately paranoid Debian laptop setup](http://www.hermann-uwe.de/blog/towards-a-moderately-paranoid-debian-laptop-setup)
+* [Solis-air access under Linux](http://www.cs.uu.nl/~koos/linux-8021x-solis-air.html)
+* [libdvdcss packages](http://www.dtek.chalmers.se/groups/dvd/deb/)
+* [Eduroam Wireless](http://gathering.tweakers.net/forum/list_messages/1191546)
