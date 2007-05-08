@@ -1,4 +1,7 @@
-Some notes on Lennert's MacBook.
+Some notes on Lennert's MacBook with Ubuntu.
+
+Most of these notes were written during installation of Ubuntu Edgy Eft 6.10
+on the laptop and have to be updated to reflect Ubuntu Feisty Fawn 7.04 status.
 
 
 # Hardware
