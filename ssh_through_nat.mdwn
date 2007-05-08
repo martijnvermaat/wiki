@@ -4,10 +4,10 @@ For this purpose, we created the user 'natuser' on 'server' (but of course we co
 
 On 'client':
 
-        $ ssh -R 2022:localhost:22 natuser@server 'while :; do sleep 86400; done'
+    $ ssh -R 2022:localhost:22 natuser@server 'while :; do sleep 86400; done'
 
 On 'server':
 
-        $ ssh -p 2022 localhost
+    $ ssh -p 2022 localhost
 
 From <http://www.linuxgazette.com/node/2248>
