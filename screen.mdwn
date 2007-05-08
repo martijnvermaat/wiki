@@ -2,45 +2,45 @@
 
 Screen key-binding:
 
-        Ctrl-a
+    Ctrl-a
 
 Detach a screen session:
 
-        Ctrl-a d
+    Ctrl-a d
 
 Reattach a screen session:
 
-        screen -r [session]
+    screen -r [session]
 
 Reattach an attached (multi-user) screen session:
 
-        screen -x user[/session]
+    screen -x user[/session]
 
 To enter a screen command:
 
-        Ctrl-a :
+    Ctrl-a :
 
 Example:
 
-        Ctrl-a :sessionname testname
+    Ctrl-a :sessionname testname
 
 # Screen windows
 
 Create a new window:
 
-        Ctrl-a c
+    Ctrl-a c
 
 Window list:
 
-        Ctrl-a "
+    Ctrl-a "
 
 Next/Previous window:
 
-        Ctrl-a n / Ctrl-a p
+    Ctrl-a n / Ctrl-a p
 
 Set window title:
 
-        Ctrl-a :title testtitle
+    Ctrl-a :title testtitle
 
 # Multi-user screen
 
@@ -52,13 +52,13 @@ and revert afterwards.
 An example where user 'martijn' creates a screen session with name 'testsession'
 to which user 'thomas' can attach read-only:
 
-        $ screen -S testsession
-        Ctrl-a :multiuser on
-        Ctrl-a :writelock on
-        Ctrl-a :acladd otheruser
+    $ screen -S testsession
+    Ctrl-a :multiuser on
+    Ctrl-a :writelock on
+    Ctrl-a :acladd otheruser
 
 User 'thomas' can now:
 
-        $ screen -x martijn/testsession
+    $ screen -x martijn/testsession
 
 Source: [OSAF: Gnu Screen](http://wiki.osafoundation.org/bin/view/Jungle/GnuScreen)
