@@ -2,29 +2,29 @@
 
 Dumping a repository including all revisions:
 
-        svnadmin dump /path/to/repository > repository.dump
+    svnadmin dump /path/to/repository > repository.dump
 
 Load a dumpfile into a repository:
 
-        svnadmin load /path/to/repository < repository.dump
+    svnadmin load /path/to/repository < repository.dump
 
 Filtering a dumpfile can be done with svndumpfilter. For example, to keep only everything inside the 'wiki' directory:
 
-        svndumpfilter include wiki --drop-empty-revs --renumber-revs < repository.dump > wiki.dump
+    svndumpfilter include wiki --drop-empty-revs --renumber-revs < repository.dump > wiki.dump
 
 We can edit this dump file to get rid of the 'wiki' parent directory. To just rename 'wiki' to 'trunk':
 
-        Node-path: wiki*           ->  Node-path: trunk*
-        Node-copyfrom-path: wiki*  ->  Node-copyfrom-path: trunk*
+    Node-path: wiki*           ->  Node-path: trunk*
+    Node-copyfrom-path: wiki*  ->  Node-copyfrom-path: trunk*
 
 Potential issue is that nodes copied from outside the 'wiki' directory don't have their content in the dump file, rendering the dump useless. Try [svndumpfilter2](http://www.tartarus.org/~simon-anonsvn/viewcvs.cgi/svn-tools/svndumpfilter2?view=markup).
 
 We could also just drop the 'wiki' prefix from all paths. Rename Node-path and Node-copyfrom-path values appropriately as like above, and remove the initial creation of the 'wiki' directory. The entry in the dumpfile will look like this:
 
-        Node-path: wiki
-        Node-action: add
-        Node-kind: dir
-        Content-length: 0
+    Node-path: wiki
+    Node-action: add
+    Node-kind: dir
+    Content-length: 0
 
 From [Version Control with Subversion: Repository Maintenance](http://svnbook.red-bean.com/en/1.2/svn.reposadmin.maint.html#svn.reposadmin.maint.tk.svndumpfilter)
 
