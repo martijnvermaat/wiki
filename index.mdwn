@@ -8,6 +8,7 @@ Bachelor project: [[incompleteness]]
 * [[convert_multimedia]]
 * [[vmware_tools]]
 * [[macbook]]
+* [[f-spot]]
 
 All wikis are supposed to have a [[sandbox]], so this one does too.
 
