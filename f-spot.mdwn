@@ -1,0 +1,26 @@
+= Updating photo locations in F-Spot database
+
+The sqlite database contains absolute paths to the photos. After moving
+all photos from /home/vermaat/photos to /vermaat/photos I updated the
+database (by default in ~/.gnome2/f-spot/photos.db) with this script:
+
+    #!/usr/bin/python
+
+    from pysqlite2 import dbapi2 as sqlite
+
+    connection = sqlite.connect('photos.db')
+    cursor = connection.cursor()
+
+    cursor.execute("SELECT id, directory_path FROM photos WHERE directory_path LIKE '/home/vermaat%'")
+
+    photos = cursor.fetchall()
+
+    for (id, directory_path) in photos:
+        print id
+        cursor.execute("UPDATE photos SET directory_path = ? WHERE id = ?", 
+                       (directory_path.replace("/home/vermaat", "/vermaat"), id))
+
+    connection.commit()
+
+
+= Multi-user F-Spot
