@@ -1,4 +1,4 @@
-= Updating photo locations in F-Spot database
+# Updating photo locations in F-Spot database
 
 The sqlite database contains absolute paths to the photos. After moving
 all photos from /home/vermaat/photos to /vermaat/photos I updated the
@@ -23,4 +23,36 @@ database (by default in ~/.gnome2/f-spot/photos.db) with this script:
     connection.commit()
 
 
-= Multi-user F-Spot
+# Multi-user F-Spot
+
+Currently, F-Spot (0.3.5) is not designed for managing a photo collection with more
+than one user. The following tricks make it possible.
+
+Store all photos in a shared directory (e.g. /vermaat/photos) which is readable and
+writable for all users and has the guid bit set. Move existing photos there and update
+the photos.db database as explained above. Move the photos.db database to the shared
+directory.
+
+    martijn@melissa:/vermaat$ ls -l
+    drwxrwsr-x 57 martijn vermaat       4096 2007-05-13 17:16 photos
+    martijn@melissa:/vermaat$ ls -l photos/photos.db
+    -rw-rw---- 1 martijn vermaat 236544 2007-05-13 17:09 photos/photos.db
+
+Make sure everything has the right group and permissions:
+
+    chown -R martijn:vermaat /vermaat/photos
+    chmod -R ug+rwX /vermaat/photos
+
+Run these commands from a cronjob to be sure the permissions are always correct.
+
+Move the original f-spot binary to an alternative location and call it from the
+new f-spot binary with database and photo locations as arguments:
+
+    mv /usr/bin/f-spot /usr/bin/f-spot.real
+
+Create a new /usr/bin/f-spot with the following contents:
+
+    #!/bin/sh
+    /usr/bin/f-spot.real -b /vermaat/photos -p /vermaat/photos
+
+This should sort-of work in a multi-user environment.
