@@ -1,0 +1,6 @@
+Subpages with configuration notes for machines.
+
+Some machine names are [here](http://svn.vermaat.name/documents/notes/names)
+
+* [[macbook]]
+* [[melissa]]
