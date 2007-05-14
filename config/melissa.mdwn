@@ -49,3 +49,6 @@ group. We make sure everything in /vermaat is owned by 'vermaat' and
 readable and writable for all group members.
 
 [This](http://svn.vermaat.name/conf/home/melissa/bin/shared-permissions) script is executed by root every few hours.
+
+The shared F-Spot database and photos are also stored on this partition
+and used as described on [[f-spot]].
