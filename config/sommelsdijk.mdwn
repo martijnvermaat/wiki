@@ -1,0 +1,6 @@
+Machines in Sommelsdijk are:
+
+* [[melissa]]
+* [[christina]]
+* [[daisy]]
+* [[bruce]]
