@@ -2,12 +2,12 @@ Desktop PC in Sommelsdijk with Ubuntu Feisty Fawn 7.04.
 
 Users:
 
-* Janny
+* Janny, sudoer
 * Aat
 * Derk
 * (Lennert)
 * (Rosanne)
-* (Martijn)
+* (Martijn, sudoer)
 
 # Hardware
 
