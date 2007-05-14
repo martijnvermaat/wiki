@@ -1,0 +1,16 @@
+Server PC in [[sommelsdijk]] with Debian Etch.
+
+# Hardware
+
+* No screen, keyboard, or mouse
+* Intel Pentium II 333 MHz
+* 128 MB RAM
+* 4.3 GB FUJITSU MPB3043ATU E ATA
+* 40 GB Maxtor 6E040L0 ATA
+* Alcatel SpeedTouch USB ADSL modem
+
+# System configuration
+
+Debian is installed on the 4.3 GB Fuijitsu harddisk.
+
+The 40 GB Maxtor is mounted as /backup.
