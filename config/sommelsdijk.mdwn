@@ -13,9 +13,9 @@
                                               .    \
                                             .       \
                                          Bruce    Melissa
-
     - wired
     . wireless
+
 
     Christina:
       ppp0  80.126.138.xxx  (Speedtouch)
