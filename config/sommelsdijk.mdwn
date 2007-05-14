@@ -13,3 +13,6 @@ Machines in Sommelsdijk are:
                                               .    \
                                             .       \
                                          bruce    melissa
+
+    - wired
+    . wireless
