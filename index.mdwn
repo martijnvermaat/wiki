@@ -9,7 +9,7 @@ Bachelor project: [[incompleteness]]
 * [[vmware_tools]]
 * [[macbook]]
 * [[f-spot]]
-* [[backup]]
+* [[config]]
 
 All wikis are supposed to have a [[sandbox]], so this one does too.
 
