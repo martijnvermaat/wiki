@@ -18,6 +18,7 @@ Users:
 * Matrox G450 AGP
 * 160 GB Maxtor 6G160P0 ATA
 * PLEXTOR PX-W5224A ATAPI CD/DVD-ROM
+* Brother HL-1430 Laser Printer
 
 
 # System configuration
