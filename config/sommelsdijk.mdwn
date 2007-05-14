@@ -1,4 +1,4 @@
-Machines in Sommelsdijk are:
+# Machines
 
 * [[melissa]]
 * [[christina]]
