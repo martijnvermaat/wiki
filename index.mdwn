@@ -7,7 +7,6 @@ Bachelor project: [[incompleteness]]
 * [[ssh_through_nat]]
 * [[convert_multimedia]]
 * [[vmware_tools]]
-* [[macbook]]
 * [[f-spot]]
 * [[config]]
 
