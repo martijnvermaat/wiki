@@ -1,4 +1,4 @@
-Desktop PC in Sommelsdijk with Ubuntu Feisty Fawn 7.04.
+Desktop PC in [[sommelsdijk]] with Ubuntu Feisty Fawn 7.04.
 
 Users:
 
@@ -9,6 +9,7 @@ Users:
 * (Rosanne)
 * (Martijn, sudoer)
 
+
 # Hardware
 
 * 19" Iiyama Vison Master Pro CRT
@@ -17,6 +18,7 @@ Users:
 * Matrox G450 AGP
 * 160 GB Maxtor 6G160P0 ATA
 * PLEXTOR PX-W5224A ATAPI CD/DVD-ROM
+
 
 # System configuration
 
@@ -36,3 +38,14 @@ The LVM volume group contains LVM volumes:
 ## Sound
 
 Install 'aumix' to adjust the volume of the sound chip.
+
+
+# User configuration
+
+## Shared data
+
+The /vermaat partition is shared by adding all users to the 'vermaat'
+group. We make sure everything in /vermaat is owned by 'vermaat' and
+readable and writable for all group members.
+
+[This](http://svn.vermaat.name/conf/home/melissa/bin/shared-permissions) script is executed by root every few hours.
