@@ -1,0 +1,37 @@
+Desktop PC in Sommelsdijk with Ubuntu Feisty Fawn 7.04.
+
+Users:
+* Janny
+* Aat
+* Derk
+* (Lennert)
+* (Rosanne)
+* (Martijn)
+
+# Hardware
+
+* 19" Iiyama Vison Master Pro CRT
+* AMD Duron 750 MHz
+* 640 MB RAM
+* Matrox G450 AGP
+* 160 GB Maxtor 6G160P0 ATA
+* PLEXTOR PX-W5224A ATAPI CD/DVD-ROM
+
+# System configuration
+
+## Partitioning
+
+One 160 GB harddisk on /dev/hda:
+
+    /dev/hda1 mounted as /boot (220 MB)
+    /dev/hda2 LVM volume group (rest of 160 GB)
+
+The LVM volume group contains LVM volumes:
+
+    /dev/mapper/lvm--group-lvm--root    mounted as / (8 GB)
+    /dev/mapper/lvm--group-lvm--home    mounted as /home (116 GB)
+    /dev/mapper/lvm--group-lvm--backup  mounted as /vermaat (24 GB)
+
+## Sound
+
+Install 'aumix' to adjust the volume of the sound chip.
