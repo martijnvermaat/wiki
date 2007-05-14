@@ -33,8 +33,9 @@ One 160 GB harddisk on /dev/hda:
 The LVM volume group contains LVM volumes:
 
     /dev/mapper/lvm--group-lvm--root    mounted as / (8 GB)
-    /dev/mapper/lvm--group-lvm--home    mounted as /home (116 GB)
-    /dev/mapper/lvm--group-lvm--backup  mounted as /vermaat (24 GB)
+    /dev/mapper/lvm--group-lvm--home    mounted as /home (118 GB)
+    /dev/mapper/lvm--group-lvm--backup  mounted as /vermaat (23 GB)
+    /dev/mapper/lvm--group-lvm--swap    (800 MB)
 
 ## Sound
 
