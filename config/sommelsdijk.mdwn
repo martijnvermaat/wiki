@@ -12,7 +12,21 @@ Machines in Sommelsdijk are:
                    USB                          . \
                                               .    \
                                             .       \
-                                         bruce    melissa
+                                         Bruce    Melissa
 
     - wired
     . wireless
+
+    Christina:
+      ppp0  80.126.138.xxx  (Speedtouch)
+      eth0  10.0.0.138      (to Daisy)
+
+    Daisy:
+      10.0.0.150   (to Christina)
+      192.168.0.2  (to users)
+
+    Melissa:
+      192.168.0.10
+
+    Bruce:
+      192.168.0.x  (DHCP from Daisy)
