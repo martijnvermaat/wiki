@@ -9,10 +9,10 @@
 
                  Alcatel
     XS4ALL --- Speedtouch --- Christina --- Daisy . . . Wireless visitor
-                   USB                          . \
-                                              .    \
-                                            .       \
-                                         Bruce    Melissa
+                   USB                       . \
+                                           .    \
+                                         .       \
+                                      Bruce    Melissa
     - wired
     . wireless
 
