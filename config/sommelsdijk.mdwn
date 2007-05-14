@@ -8,7 +8,7 @@
 # Network topology
 
                  Alcatel
-    XS4ALL ---- Speedtouch ---- Christina ---- Daisy . . . Wireless visitor
+    XS4ALL --- Speedtouch --- Christina --- Daisy . . . Wireless visitor
                    USB                          . \
                                               .    \
                                             .       \
