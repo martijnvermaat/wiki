@@ -4,3 +4,12 @@ Machines in Sommelsdijk are:
 * [[christina]]
 * [[daisy]]
 * [[bruce]]
+
+# Network topology
+
+                 Alcatel
+    XS4ALL ---- Speedtouch ---- Christina ---- Daisy
+                   USB                          . \
+                                              .    \
+                                            .       \
+                                         bruce    melissa
