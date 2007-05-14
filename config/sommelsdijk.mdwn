@@ -8,7 +8,7 @@
 # Network topology
 
                  Alcatel
-    XS4ALL --- Speedtouch --- Christina --- Daisy . . . Wireless Visitor
+    XS4ALL --- SpeedTouch --- Christina --- Daisy . . . Wireless Visitor
                    USB                       . \
                                            .    \
                                          .       \
@@ -18,7 +18,7 @@
 
 
     Christina:
-      ppp0  80.126.138.xxx  (Speedtouch)
+      ppp0  80.126.138.xxx  (SpeedTouch)
       eth0  10.0.0.138      (to Daisy)
 
     Daisy:
