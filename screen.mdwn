@@ -46,7 +46,7 @@ Set window title:
 
 Screen needs to be run as setuid root to be able to share
 screens between different users. On Debian, screen is not
-setup like that by default, chmod u+x screen to 'fix' this,
+setup like that by default, chmod u+s screen to 'fix' this,
 and revert afterwards.
 
 An example where user 'martijn' creates a screen session with name 'testsession'
