@@ -186,3 +186,4 @@ investigate
 * [Solis-air access under Linux](http://www.cs.uu.nl/~koos/linux-8021x-solis-air.html)
 * [libdvdcss packages](http://www.dtek.chalmers.se/groups/dvd/deb/)
 * [Eduroam Wireless](http://gathering.tweakers.net/forum/list_messages/1191546)
+* [Remapping the Function Key Behaviour on Macbook / Macbook Pro](http://ubuntu-tutorials.com/2007/06/03/remapping-the-function-key-behavior-on-macbook-macbook-pro/)
