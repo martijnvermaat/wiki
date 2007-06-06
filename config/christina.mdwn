@@ -1,5 +1,10 @@
 Server PC in [[sommelsdijk]] with Debian Etch.
 
+This machine used to serve my Subversion repositories over HTTP,
+but is now just a backup server for [[melissa]] and temorarily
+connects the network to the internet with the USB modem since the
+ethernet modem has died.
+
 # Hardware
 
 * No screen, keyboard, or mouse
