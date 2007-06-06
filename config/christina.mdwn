@@ -19,3 +19,7 @@ ethernet modem has died.
 Debian is installed on the 4.3 GB Fuijitsu harddisk.
 
 The 40 GB Maxtor is mounted as /backup.
+
+ppp0 is the internet connection on the Alcatel SpeedTouch USB
+ADSL modem. This connection is shared with the Wireless router
+on eth0 (see network topology of [[sommelsdijk]].
