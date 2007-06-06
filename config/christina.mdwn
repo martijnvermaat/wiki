@@ -6,7 +6,7 @@ connects the network to the internet with the USB modem since the
 ethernet modem has died.
 
 As of June 6 2007, the following software has been removed: Apache 2,
-Subversion, Sun J2SDK 1.4/1.5, MoinMoin, PHP4, MySQL, vsftpd.
+Subversion, Sun J2SDK 1.4/1.5, MoinMoin, PHP4, MySQL, vsftpd, Samba.
 
 # Hardware
 
