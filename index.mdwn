@@ -1,6 +1,6 @@
 Welcome to [[Martijn]]'s new wiki.
 
-Bachelor project: [[incompleteness]]
+Bachelor project: [[correct_compilers]]
 
 * [[subversion]]
 * [[screen]]
@@ -9,6 +9,7 @@ Bachelor project: [[incompleteness]]
 * [[vmware_tools]]
 * [[f-spot]]
 * [[config]]
+* [[incompleteness]]
 
 All wikis are supposed to have a [[sandbox]], so this one does too.
 
