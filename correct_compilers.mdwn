@@ -1,0 +1,5 @@
+# Literature
+
+* [Mechanized verification of CPS transformations](http://pauillac.inria.fr/~xleroy/publi/cps-dargaye-leroy.pdf) (draft), Zaynah Dargaye, Xavier Leroy, 2007-06
+* [Formal verification of a C compiler front-end](http://pauillac.inria.fr/~xleroy/publi/cfront.pdf), Sandrine Blazy, Zaynah Dargaye, Xavier Leroy, 2006-08
+* [Formal certification of a compiler back-end, or: programming a compiler with a proof assistant](http://pauillac.inria.fr/~xleroy/publi/compiler-certif.pdf), Xavier Leroy, 2006-01
