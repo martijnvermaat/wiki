@@ -33,3 +33,4 @@
 * [A Comparison of PVS and Isabelle/HOL](http://citeseer.ist.psu.edu/205636.html), David Griffioen, Marieke Huisman, 1998
 * [The Seventeen Provers of the World](http://www.cs.ru.nl/~freek/comparison/index.html), Freek Wiedijk, -2007
 * [A Review of Theorem Provers](http://www.cs.cornell.edu/NuPrl/PRLSeminar/PRLSeminar01_02/Nogin/PRLseminar7b.pdf), Aleksey Nogin, 2002-02
+* [How to believe a machine-checked proof](http://homepages.inf.ed.ac.uk/rpollack/export/believing.ps.gz), Robert Pollack, 1998
