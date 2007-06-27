@@ -27,6 +27,7 @@
 ## Coq
 
 * [Interactive Theorem Proving and Program Development - Coq'Art: The Calculus of Inductive Constructions](http://www.labri.fr/perso/casteran/CoqArt/), Yves Bertot, Pierre Castéran, 2004
+* [The Coq Proof Assistant: A Tutorial](http://coq.inria.fr/V8.1/tutorial.html), Gérard Huet, Gilles Kahn and Christine Paulin-Mohring, 2006
 * [Logical Verification Course Notes](http://www.cs.vu.nl/~femke/courses/lv/notes/notes.pdf), Femke van Raamsdonk, 2006
 
 ## Theorem provers
