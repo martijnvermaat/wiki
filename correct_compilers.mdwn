@@ -2,4 +2,7 @@
 
 * [Mechanized verification of CPS transformations](http://pauillac.inria.fr/~xleroy/publi/cps-dargaye-leroy.pdf) (draft), Zaynah Dargaye, Xavier Leroy, 2007-06
 * [Formal verification of a C compiler front-end](http://pauillac.inria.fr/~xleroy/publi/cfront.pdf), Sandrine Blazy, Zaynah Dargaye, Xavier Leroy, 2006-08
-* [Formal certification of a compiler back-end, or: programming a compiler with a proof assistant](http://pauillac.inria.fr/~xleroy/publi/compiler-certif.pdf), Xavier Leroy, 2006-01
+* [Formal certification of a compiler back-end, or: programming a compiler with a proof assistant](http://pauillac.inria.fr/~xleroy/publi/compiler-certif.pdf), Xavier Leroy, 2006-01, [code](http://pauillac.inria.fr/~xleroy/compcert-backend/)
+* [A Machine-Checked Model for a Java-Like Language, Virtual Machine and Compiler](http://www4.informatik.tu-muenchen.de/~nipkow/pubs/Jinja/jinja.pdf), Gerwin Klein, Tobias Nipkow, 2006
+* [Towards the Formal Verification of a C0 Compiler](http://www.informatik.uni-trier.de/~ley/db/conf/sefm/sefm2005.html#LeinenbachPP05), Dirk Leinenbach, Wolfgang Paul, Elena Petrova, 2005-09
+* [A certified type-preserving compiler from lambda calculus to assembly language](http://www.cs.berkeley.edu/~adamc/papers/CtpcPLDI07/CtpcPLDI07.pdf), A. Chlipala, 2007, [code](http://ltamer.sourceforge.net/)
