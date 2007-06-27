@@ -13,6 +13,8 @@
 * [Compiler Verification for C0](http://www.irit.fr/~Martin.Strecker/Publications/c0compil.pdf), Martin Strecker, 2005
 * [VLISP: A verified implementation of Scheme](http://citeseer.ist.psu.edu/117391.html), Joshua D. Guttman, John D. Ramsdell, Mitchell Wand, 1995
 * [Correctness of a compiler for arithmetic expressions](http://www-formal.stanford.edu/jmc/mcpain.html), John McCarthy, J. Painter, 1967
+* [A Mechanically Verified Compiling Specification for a Lisp Compiler](http://www.informatik.uni-ulm.de/ki/Dold/fsttcs01-extended.ps), Axel Dold, Vincent Vialard, 2001
+* [Verification of Compilers](http://citeseer.ist.psu.edu/550740.html),  Gerhard Goos, Wolf Zimmermann, 1999
 * [Compiler verification: a bibliography](http://portal.acm.org/citation.cfm?id=966235&dl=&coll=&CFID=15151515&CFTOKEN=6184618), M. A. Dave, 2003
 * [DeCCo : A Demonstrably Correct Compiler](http://www-users.cs.york.ac.uk/~susan/bib/ss/hic.htm), Susan Stepney et al, 1993-2003
 
