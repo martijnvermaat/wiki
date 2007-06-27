@@ -20,3 +20,8 @@
 
 * [Chalmers course on Semantics in Calculus of Constructions](http://groups.google.com/group/chalmers-cs-semantics-in-coq?lnk=srg&hl=en), Yves Bertot, 2007
 * [C formalized in HOL](http://www.cl.cam.ac.uk/users/mn200/PhD/thesis-report.ps.gz), Michael Norrish, 1998
+
+## Coq
+
+* [Interactive Theorem Proving and Program Development - Coq'Art: The Calculus of Inductive Constructions](http://www.labri.fr/perso/casteran/CoqArt/), Yves Bertot, Pierre Castéran, 2004
+* [Logical Verification Course Notes](http://www.cs.vu.nl/~femke/courses/lv/notes/notes.pdf), Femke van Raamsdonk, 2006
