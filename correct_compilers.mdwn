@@ -17,6 +17,7 @@
 * [Verification of Compilers](http://citeseer.ist.psu.edu/550740.html),  Gerhard Goos, Wolf Zimmermann, 1999
 * [Compiler verification: a bibliography](http://portal.acm.org/citation.cfm?id=966235&dl=&coll=&CFID=15151515&CFTOKEN=6184618), M. A. Dave, 2003
 * [DeCCo : A Demonstrably Correct Compiler](http://www-users.cs.york.ac.uk/~susan/bib/ss/hic.htm), Susan Stepney et al, 1993-2003
+* [Formal Compiler Construction in a Logical Framework.](http://nogin.org/papers/mcompiler-hosc.html), Jason Hickey, Aleksey Nogin, 2006-09
 
 ## Semantics
 
@@ -27,3 +28,8 @@
 
 * [Interactive Theorem Proving and Program Development - Coq'Art: The Calculus of Inductive Constructions](http://www.labri.fr/perso/casteran/CoqArt/), Yves Bertot, Pierre Castéran, 2004
 * [Logical Verification Course Notes](http://www.cs.vu.nl/~femke/courses/lv/notes/notes.pdf), Femke van Raamsdonk, 2006
+
+## Theorem provers
+* [A Comparison of PVS and Isabelle/HOL](http://citeseer.ist.psu.edu/205636.html), David Griffioen, Marieke Huisman, 1998
+* [The Seventeen Provers of the World](http://www.cs.ru.nl/~freek/comparison/index.html), Freek Wiedijk, -2007
+* [A Review of Theorem Provers](http://www.cs.cornell.edu/NuPrl/PRLSeminar/PRLSeminar01_02/Nogin/PRLseminar7b.pdf), Aleksey Nogin, 2002-02
