@@ -22,6 +22,7 @@
 ## Semantics
 
 * [Chalmers course on Semantics in Calculus of Constructions](http://groups.google.com/group/chalmers-cs-semantics-in-coq?lnk=srg&hl=en), Yves Bertot, 2007
+* [Coinductive big-step operational semantics](http://pauillac.inria.fr/~xleroy/publi/coindsem-journal.pdf) (draft), Xavier Leroy, Hervé Grall, 2007-02
 * [C formalized in HOL](http://www.cl.cam.ac.uk/users/mn200/PhD/thesis-report.ps.gz), Michael Norrish, 1998
 
 ## Coq
