@@ -19,7 +19,7 @@
 * [DeCCo : A Demonstrably Correct Compiler](http://www-users.cs.york.ac.uk/~susan/bib/ss/hic.htm), Susan Stepney et al, 1993-2003
 * [Formal Compiler Construction in a Logical Framework.](http://nogin.org/papers/mcompiler-hosc.html), Jason Hickey, Aleksey Nogin, 2006-09
 
-## Semantics
+## Programming language semantics
 
 * [Chalmers course on Semantics in Calculus of Constructions](http://groups.google.com/group/chalmers-cs-semantics-in-coq?lnk=srg&hl=en), Yves Bertot, 2007
 * [Harvard Course Programming Languages and Semantics](http://www.eecs.harvard.edu/~greg/cs256sp2006/), Greg Morrisett, 2006
@@ -29,14 +29,14 @@
 * [Coinductive big-step operational semantics](http://pauillac.inria.fr/~xleroy/publi/coindsem-journal.pdf) (draft), Xavier Leroy, Hervé Grall, 2007-02
 * [C formalized in HOL](http://www.cl.cam.ac.uk/users/mn200/PhD/thesis-report.ps.gz), Michael Norrish, 1998
 
-## Coq
-
-* [Interactive Theorem Proving and Program Development - Coq'Art: The Calculus of Inductive Constructions](http://www.labri.fr/perso/casteran/CoqArt/), Yves Bertot, Pierre Castéran, 2004
-* [The Coq Proof Assistant: A Tutorial](http://coq.inria.fr/V8.1/tutorial.html), Gérard Huet, Gilles Kahn and Christine Paulin-Mohring, 2006
-* [Logical Verification Course Notes](http://www.cs.vu.nl/~femke/courses/lv/notes/notes.pdf), Femke van Raamsdonk, 2006
-
 ## Theorem provers
 * [A Comparison of PVS and Isabelle/HOL](http://citeseer.ist.psu.edu/205636.html), David Griffioen, Marieke Huisman, 1998
 * [The Seventeen Provers of the World](http://www.cs.ru.nl/~freek/comparison/index.html), Freek Wiedijk, -2007
 * [A Review of Theorem Provers](http://www.cs.cornell.edu/NuPrl/PRLSeminar/PRLSeminar01_02/Nogin/PRLseminar7b.pdf), Aleksey Nogin, 2002-02
 * [How to believe a machine-checked proof](http://homepages.inf.ed.ac.uk/rpollack/export/believing.ps.gz), Robert Pollack, 1998
+
+## Coq
+
+* [Interactive Theorem Proving and Program Development - Coq'Art: The Calculus of Inductive Constructions](http://www.labri.fr/perso/casteran/CoqArt/), Yves Bertot, Pierre Castéran, 2004
+* [The Coq Proof Assistant: A Tutorial](http://coq.inria.fr/V8.1/tutorial.html), Gérard Huet, Gilles Kahn and Christine Paulin-Mohring, 2006
+* [Logical Verification Course Notes](http://www.cs.vu.nl/~femke/courses/lv/notes/notes.pdf), Femke van Raamsdonk, 2006
