@@ -1,5 +1,7 @@
 # Literature
 
+## Correct compilers
+
 * [Mechanized verification of CPS transformations](http://pauillac.inria.fr/~xleroy/publi/cps-dargaye-leroy.pdf) (draft), Zaynah Dargaye, Xavier Leroy, 2007-06
 * [Formal verification of a C compiler front-end](http://pauillac.inria.fr/~xleroy/publi/cfront.pdf), Sandrine Blazy, Zaynah Dargaye, Xavier Leroy, 2006-08
 * [Formal certification of a compiler back-end, or: programming a compiler with a proof assistant](http://pauillac.inria.fr/~xleroy/publi/compiler-certif.pdf), Xavier Leroy, 2006-01, [code](http://pauillac.inria.fr/~xleroy/compcert-backend/)
@@ -7,8 +9,14 @@
 * [Towards the Formal Verification of a C0 Compiler](http://www.informatik.uni-trier.de/~ley/db/conf/sefm/sefm2005.html#LeinenbachPP05), Dirk Leinenbach, Wolfgang Paul, Elena Petrova, 2005-09
 * [A certified type-preserving compiler from lambda calculus to assembly language](http://www.cs.berkeley.edu/~adamc/papers/CtpcPLDI07/CtpcPLDI07.pdf), A. Chlipala, 2007, [code](http://ltamer.sourceforge.net/)
 * [A Mechanically Verified Language Implementation](http://citeseer.ist.psu.edu/moore89mechanically.html), J. Strother Moore, 1989
+* [Formal Verification of a Java Compiler in Isabelle](http://www.irit.fr/~Martin.Strecker/Publications/compverif02.pdf), Martin Strecker, 2002
 * [Compiler Verification for C0](http://www.irit.fr/~Martin.Strecker/Publications/c0compil.pdf), Martin Strecker, 2005
 * [VLISP: A verified implementation of Scheme](http://citeseer.ist.psu.edu/117391.html), Joshua D. Guttman, John D. Ramsdell, Mitchell Wand, 1995
 * [Correctness of a compiler for arithmetic expressions](http://www-formal.stanford.edu/jmc/mcpain.html), John McCarthy, J. Painter, 1967
 * [Compiler verification: a bibliography](http://portal.acm.org/citation.cfm?id=966235&dl=&coll=&CFID=15151515&CFTOKEN=6184618), M. A. Dave, 2003
+* [DeCCo : A Demonstrably Correct Compiler](http://www-users.cs.york.ac.uk/~susan/bib/ss/hic.htm), Susan Stepney et al, 1993-2003
 
+## Semantics
+
+* [Chalmers course on Semantics in Calculus of Constructions](http://groups.google.com/group/chalmers-cs-semantics-in-coq?lnk=srg&hl=en), Yves Bertot, 2007
+* [C formalized in HOL](http://www.cl.cam.ac.uk/users/mn200/PhD/thesis-report.ps.gz), Michael Norrish, 1998
