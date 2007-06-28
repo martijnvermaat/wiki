@@ -17,7 +17,7 @@
 * [Verification of Compilers](http://citeseer.ist.psu.edu/550740.html),  Gerhard Goos, Wolf Zimmermann, 1999
 * [Compiler verification: a bibliography](http://portal.acm.org/citation.cfm?id=966235&dl=&coll=&CFID=15151515&CFTOKEN=6184618), M. A. Dave, 2003
 * [DeCCo : A Demonstrably Correct Compiler](http://www-users.cs.york.ac.uk/~susan/bib/ss/hic.htm), Susan Stepney et al, 1993-2003
-* [Formal Compiler Construction in a Logical Framework.](http://nogin.org/papers/mcompiler-hosc.html), Jason Hickey, Aleksey Nogin, 2006-09
+* [Formal Compiler Construction in a Logical Framework](http://nogin.org/papers/mcompiler-hosc.html), Jason Hickey, Aleksey Nogin, 2006-09
 
 ## Programming language semantics
 
