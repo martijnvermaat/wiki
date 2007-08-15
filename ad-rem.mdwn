@@ -1,5 +1,27 @@
 # Vakantie augustus 2007 Frankrijk
 
+
+## Samenvatting
+
+Loes huurt een auto voor 10 dagen bij Ad-rem, voor de vakantie naar Frankrijk met Martijn, van 2 t/m 11 augustus. Tijdens een terugrit naar de camping valt 's avonds de stuurbekrachtiging weg en gaat er een lampje branden. Volgens het boekje van de auto mogen we niet verder rijden (alleen eventueel na controle onder de motorkap). De reisverzekering van Loes regelt een sleepwagen en een taxi naar de camping. De auto komt bij de Renault garage, maar na onderzoek zien ze dat ze de auto niet kunnen repareren. Wegslepen naar een SEAT garage vindt Ad-rem te duur, dus ze regelen een tweede garage even verderop. Als Loes en Martijn daar de auto op willen halen vertelt de monteur dat ook zij de auto niet kunnen maken zonder een nieuw onderdeel. Ad-rem stuurt het onderdeel op zodat de auto vier dagen later gemaakt kan worden.
+
+*todo: dagen vermelden en wat wij vinden dat ad-rem fout heeft gedaan en wat we nu willen*
+
+
+## Gegevens
+
+### Spelers
+
+* Loes Claessen, 23 jaar, Utrecht
+* Martijn Vermaat, 25 jaar, Utrecht
+* Ad-rem, autoverhuurbedrijf, Utrecht
+* Jos Claessen, vader van Loes
+
+Loes heeft een reisverzekering: *todo*
+
+De auto is gehuurd met verzekering en inzittendeverzekering, Ad-rem is niet ANWB verzekerd in het buitenland.
+
+
 ## Kosten
 
 Gemaakte kosten voor de auto:
@@ -16,7 +38,7 @@ Overige kosten:
 
 * Meer dan 250 Euro bellen van Loes (waar nog 3 dagen missen)
 * Onbekend bellen van Martijn
-* hotel etc...
+* hotel etc..., *todo*
 
 Ad-rem heeft vanuit Nederland de reparatie betaald:
 
@@ -56,3 +78,5 @@ Ad-rem heeft vanuit Nederland de reparatie betaald:
 **22:44** Gebeld door SOS, ze hebben een garage met sleepservice gevonden.
 
 **22:54** Gebeld door SOS, de sleepwagen komt eraan.
+
+*todo: telefoongegevens aanvullen met wat er verder gebeurt*
