@@ -40,6 +40,14 @@ Fax 030 - 296 41 82
 
 De auto is gehuurd met verzekering en inzittendeverzekering, Ad-rem is niet ANWB verzekerd in het buitenland.
 
+### Renault garage
+
+*todo*
+
+### Tweede garage
+
+*todo*
+
 
 ## Logboek
 
@@ -76,6 +84,57 @@ De auto is gehuurd met verzekering en inzittendeverzekering, Ad-rem is niet ANWB
 **22:54** Gebeld door SOS, de sleepwagen komt eraan.
 
 *todo: telefoongegevens aanvullen met wat er verder gebeurt*
+
+### Dinsdag 7 augustus
+
+**10:18** Gebeld naar Renault garage. De sleepkosten waren 205 Euro. De V-riem (Engels: belt) en de lager (Engels: bearing) moeten worden vervangen en dat gaat 170 Euro kosten. We zeggen eerst Ad-rem te zullen bellen.
+
+**10:27** Gebeld naar Ad-rem, zij vinden het niet goed, we moeten alleen de V-riem laten repareren.
+
+**10:32** Gebeld naar Renault garage, zij willen alleen de V-riem plus de lager vervangen, of anders niets.
+
+**10:35** Gebeld naar Ad-rem en de optie voorgelegd.
+
+**11:19** Gebeld door Ad-rem, de volledige reparatie voor 170 Euro mag worden uitgevoerd, 'over de sleepkosten hebben we het nog wel'.
+
+**11:22** Gebeld naar Renault garage dat de reparatie uitgevoerd kan worden.
+
+**11:44** Gebeld door Renault garage. Niet alleen de V-riem en de lager moeten worden vervangen, maar ook de ondersteuning (Engels: support) is kapot. Dit onderdeel hebben ze niet en ze willen de reparatie ook niet uitvoeren. Ze stellen voor de auto te verslepen naar een SEAT garage.
+
+**11:50** Gebeld naar Martijn van Ad-rem met deze info. Hij zegt dat hij het er niet mee eens is en denkt te worden afgezet door de garage. Loes vraagt hem dan zelf direct met de garage te bellen.
+
+**12:12** Gebeld door Martijn van Ad-rem dat de garage niet te bereiken is.
+
+**12:28** Gebeld door Huub Pluimen van SOS. Hij heeft ons dossier overgenomen van zijn collega en informeert naar hoe het er voor staat. Hij kan verder niet veel voor ons doen, maar wil de garage bellen om precies duidelijk te krijgen wat er met de auto is.
+
+**13:13** Gebeld naar SOS om te vragen of Huub Pluimen ook de garage duidelijk wil maken dat alleen de V-riem gemaakt dient te worden.
+
+**13:48** Gebeld door Huub Pluimen van SOS om verduidelijking van ons telefoontje van 13:13.
+
+**14:02** Gebeld door Huub Pluimen van SOS en heeft bij de Renault garage nagevraagd wat er aan de auto mankeert. "Multiriem (belt) gebroken die dynamo en stuurbekrachtiging aandrijft. Die wordt op spanning gehouden door een drukrol (bearing). Deze drukrol is gemonteerd op een stangetje (support) dat ook gebroken is." Hij zal nu Ad-rem bellen met deze informatie en ze vragen ons terug te bellen.
+
+**16:17** Gebeld door Ad-rem, ze zeggen bezig te zijn.
+
+**17:20** Gebeld door Ad-rem, alles is geregeld. De Renault garage zal de auto 8 augustus voor 15:30 verslepen (na betaling) naar een tweede garage (*todo: naam*) waar de auto diezelfde dag nog gerepareerd zal worden. De kosten van de Renault garage zijn 256,32 en Ad-rem kan vanuit Nederland niets betalen. Ze vragen of wij dit willen betalen en 'dan kijken we thuis wel'.
+
+### Woensdag 8 augustus
+
+### Donderdag 9 augustus
+
+### Vrijdag 10 augustus
+
+### Zaterdag 11 augustus
+
+### Zondag 12 augustus
+
+### Maandag 13 augustus
+
+### Dinsdag 14 augustus
+
+### Woensdag 15 augustus
+
+*todo: telefoontjes van mobiel Martijn toevoegen*
+*todo: naam van gesproken persoon toevoegen*
 
 
 ## Kosten
