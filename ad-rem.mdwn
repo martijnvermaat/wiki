@@ -10,39 +10,35 @@ Loes huurt een auto voor 10 dagen bij Ad-rem, voor de vakantie naar Frankrijk me
 
 ## Gegevens
 
-### Spelers
+### Loes Claessen
 
-* Loes Claessen, 23 jaar, Utrecht
-* Martijn Vermaat, 25 jaar, Utrecht
-* Ad-rem, autoverhuurbedrijf, Utrecht
-* Jos Claessen, vader van Loes
+Rhijnvisfeithstraat ... *todo*
 
-Loes heeft een reisverzekering: *todo*
+Geboren 24-09-1983
+
+Reiserverzekering: *todo*
+
+### Martijn vermaat
+
+Pelikaanstraat 25bis
+3582 SC Utrecht
+0640920276
+
+Geboren 29-10-1981
+
+### Jos Claessen
+
+Vader van Loes Claessen, 06-*todo*
+
+### Ad-rem
+
+Steenovenweg 5 
+Telefoon 030 - 296 11 40 
+Fax 030 - 296 41 82 
+
+### SEAT LEON
 
 De auto is gehuurd met verzekering en inzittendeverzekering, Ad-rem is niet ANWB verzekerd in het buitenland.
-
-
-## Kosten
-
-Gemaakte kosten voor de auto:
-
-* 50,00 Euro aanbetaling betaald aan Ad-rem bij reservering van de auto.
-* 256,33 Euro betaald aan de Renault garage in Les Houches voor versleping (twee keer) en kijken naar de auto.
-
-Geschatte kosten voor de autohuur:
-
-* 166,60 Euro (7 dagen, 20 Euro per dag incl verzekering en inzittende verzekering, 19% BTW)
-* 240 Euro (2500 kilometer, 8 cent per kilometer, 19% BTW)
-
-Overige kosten:
-
-* Meer dan 250 Euro bellen van Loes (waar nog 3 dagen missen)
-* Onbekend bellen van Martijn
-* hotel etc..., *todo*
-
-Ad-rem heeft vanuit Nederland de reparatie betaald:
-
-* 418,82 Euro (de opdracht was origineel gegeven voor 580 Euro)
 
 
 ## Logboek
@@ -80,3 +76,26 @@ Ad-rem heeft vanuit Nederland de reparatie betaald:
 **22:54** Gebeld door SOS, de sleepwagen komt eraan.
 
 *todo: telefoongegevens aanvullen met wat er verder gebeurt*
+
+
+## Kosten
+
+Gemaakte kosten voor de auto:
+
+* 50,00 Euro aanbetaling betaald aan Ad-rem bij reservering van de auto.
+* 256,33 Euro betaald aan de Renault garage in Les Houches voor versleping (twee keer) en kijken naar de auto.
+
+Geschatte kosten voor de autohuur:
+
+* 166,60 Euro (7 dagen, 20 Euro per dag incl verzekering en inzittende verzekering, 19% BTW)
+* 240 Euro (2500 kilometer, 8 cent per kilometer, 19% BTW)
+
+Overige kosten:
+
+* Meer dan 250 Euro bellen van Loes (waar nog 3 dagen missen)
+* Onbekend bellen van Martijn
+* hotel etc..., *todo*
+
+Ad-rem heeft vanuit Nederland de reparatie betaald:
+
+* 418,82 Euro (de opdracht was origineel gegeven voor 580 Euro)
