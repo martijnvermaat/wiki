@@ -10,6 +10,7 @@ Bachelor project: [[correct_compilers]]
 * [[f-spot]]
 * [[config]]
 * [[incompleteness]]
+* [[ad-rem]]
 
 All wikis are supposed to have a [[sandbox]], so this one does too.
 
