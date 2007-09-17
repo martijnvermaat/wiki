@@ -6,3 +6,11 @@ Convert all WMA files in this directory to WAV files:
       mplayer -vc null -vo null -ao pcm:waveheader "$i";
       mv audiodump.wav "`basename "$i" .wma`.wav";
     done;
+
+# APE with CUE sheet to OGG
+
+Convert an APE file with CUE sheet to OGG files:
+
+    mac CDImage.ape CDImage.wav -d
+    bchunk -w CDImage.wav CDImage.cue result
+    oggenc -b 256 -a Artist -d Date -l Album -t Title result*.wav
