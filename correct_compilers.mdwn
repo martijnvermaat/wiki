@@ -2,7 +2,7 @@
 
 ## Compiler verification
 
-* [Mechanized verification of CPS transformations](http://pauillac.inria.fr/~xleroy/publi/cps-dargaye-leroy.pdf) (draft), Zaynah Dargaye, Xavier Leroy, 2007-06
+* [Mechanized verification of CPS transformations](http://pauillac.inria.fr/~xleroy/publi/cps-dargaye-leroy.pdf), Zaynah Dargaye, Xavier Leroy, 2007-06
 * [Formal verification of a C compiler front-end](http://pauillac.inria.fr/~xleroy/publi/cfront.pdf), Sandrine Blazy, Zaynah Dargaye, Xavier Leroy, 2006-08
 * [Formal certification of a compiler back-end, or: programming a compiler with a proof assistant](http://pauillac.inria.fr/~xleroy/publi/compiler-certif.pdf), Xavier Leroy, 2006-01, [code](http://pauillac.inria.fr/~xleroy/compcert-backend/)
 * [A Machine-Checked Model for a Java-Like Language, Virtual Machine and Compiler](http://www4.informatik.tu-muenchen.de/~nipkow/pubs/Jinja/jinja.pdf), Gerwin Klein, Tobias Nipkow, 2006
