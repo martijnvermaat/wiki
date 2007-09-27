@@ -1,0 +1,6 @@
+# Literature
+
+## Mechanized Verification of CPS transformations
+
+* [Mechanized verification of CPS transformations](http://pauillac.inria.fr/~xleroy/publi/cps-dargaye-leroy.pdf), Zaynah Dargaye, Xavier Leroy, 2007-06
+* [A certified type-preserving compiler from lambda calculus to assembly language](http://www.cs.berkeley.edu/~adamc/papers/CtpcPLDI07/CtpcPLDI07.pdf), A. Chlipala, 2007, [code](http://ltamer.sourceforge.net/)
