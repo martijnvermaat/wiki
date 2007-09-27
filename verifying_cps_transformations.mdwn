@@ -1,13 +1,11 @@
 # Literature
 
-## Mechanized verification of CPS transformations
+## Verification of CPS transformations
 
 * [Mechanized verification of CPS transformations](http://pauillac.inria.fr/~xleroy/publi/cps-dargaye-leroy.pdf), Zaynah Dargaye, Xavier Leroy, 2007-06
 * [A certified type-preserving compiler from lambda calculus to assembly language](http://www.cs.berkeley.edu/~adamc/papers/CtpcPLDI07/CtpcPLDI07.pdf), A. Chlipala, 2007, [code](http://ltamer.sourceforge.net/)
 * [Verifying CPS Transformations in Isabelle/HOL](http://www.score.is.tsukuba.ac.jp/~minamide/papers/), Y. Minamide, K. Okuma, 2003
 * [Mechanically Verifying Correctness of CPS Compilation](http://citeseer.ist.psu.edu/tian06mechanically.html), Ye Henry Tian, 2006
-
-## Verification of CPS transformations
 
 ## CPS transformations
 
