@@ -1,6 +1,7 @@
 Welcome to [[Martijn]]'s new wiki.
 
-Bachelor project: [[correct_compilers]]
+Bachelor project: [[verifying_cps_transformations]]
+Possible Master's project: [[correct_compilers]]
 
 * [[subversion]]
 * [[screen]]
