@@ -15,4 +15,4 @@
 
 ## Applications
 
-* [Compiling with Continuations](http://www.cs.princeton.edu/~appel/papers/cwc.html), Andrew W. Appel, 1960
+* [Compiling with Continuations](http://www.cs.princeton.edu/~appel/papers/cwc.html), Andrew W. Appel, 1992
