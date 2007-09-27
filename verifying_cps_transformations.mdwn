@@ -12,3 +12,7 @@
 * [Call-by-name, Call-by-value and the lambda-calculus](http://homepages.inf.ed.ac.uk/gdp/publications/cbn_cbv_lambda.pdf), G. D. Plotkin, 1975
 * [A First-Order One-Pass CPS Transformation](http://www.brics.dk/RS/01/49/), O. Danvy, L. R. Nielsen, 2001-12
 * [CPS Transformation of Beta-Redexes](http://www.brics.dk/RS/04/39/), O. Danvy, L. R. Nielsen, 2004-12
+
+## Applications
+
+* [Compiling with Continuations](http://www.cs.princeton.edu/~appel/papers/cwc.html), Andrew W. Appel, 1960
