@@ -15,6 +15,8 @@ Possible Master's project: [[correct_compilers]]
 * [[incompleteness]]
 * [[ad-rem]]
 
+Taking notes: [[notepad]]
+
 All wikis are supposed to have a [[sandbox]], so this one does too.
 
 This wiki is powered by [ikiwiki](http://ikiwiki.info) :-)
