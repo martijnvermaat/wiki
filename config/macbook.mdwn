@@ -152,6 +152,7 @@ investigate
 * [#59947: False compositing activation](https://launchpad.net/distros/ubuntu/+source/metacity/+bug/59947)
 * [#52852: MacBook gets extremely hot under Linux](https://launchpad.net/distros/ubuntu/+source/linux-source-2.6.15/+bug/52852)
 * [#9870: Better spam filtering for Evolution](https://launchpad.net/distros/ubuntu/+source/evolution/+bug/9870)
+* [#151016: New in 2.6.22-13: System doesn't always wake from suspend](https://bugs.launchpad.net/ubuntu/+source/linux-source-2.6.22/+bug/151016)
 * [Bugs tagged 'macbook'](https://launchpad.net/ubuntu/+bugs?field.tag=macbook)
 
 ## Encrypted filesystem
