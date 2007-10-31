@@ -1,4 +1,4 @@
-We have a machine 'client' behind a NAT firewall and a machine 'server' to which we can directly connect. We want to connect from 'server' to 'basement'.
+We have a machine 'client' behind a NAT firewall and a machine 'server' to which we can directly connect. We want to connect from 'server' to 'client'.
 
 For this purpose, we created the user 'natuser' on 'server' (but of course we could do with any existing user).
 
