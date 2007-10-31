@@ -180,6 +180,7 @@ investigate
 * [MacBook: Control the brightness by a key](http://ubuntuforums.org/showthread.php?t=215801)
 * [SMC Firmware Update](http://www.apple.com/downloads/macosx/apple/macbooksmcfirmwareupdate.html) (better fan policy for cooling)
 * [gpomme handles the hotkeys](http://packages.ubuntu.com/feisty/utils/gpomme)
+* [Enabling the Motion Sensor on the Macbook for Physical Neverball!](http://ubuntu-tutorials.com/2007/10/31/enabling-the-motion-sensor-on-the-macbook-for-physical-neverball/)
 * [Laptop Hardrive Killer Bug - How to discover whether you are affected](http://ubuntudemon.wordpress.com/2007/10/28/laptop-hardrive-killer-bug-how-to-discover-whether-you-are-affected/)
 
 ## Unsorted
