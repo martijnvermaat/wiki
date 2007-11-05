@@ -182,6 +182,7 @@ investigate
 * [gpomme handles the hotkeys](http://packages.ubuntu.com/feisty/utils/gpomme)
 * [Enabling the Motion Sensor on the Macbook for Physical Neverball!](http://ubuntu-tutorials.com/2007/10/31/enabling-the-motion-sensor-on-the-macbook-for-physical-neverball/)
 * [Laptop Hardrive Killer Bug - How to discover whether you are affected](http://ubuntudemon.wordpress.com/2007/10/28/laptop-hardrive-killer-bug-how-to-discover-whether-you-are-affected/)
+* ['Ontwerpfout MacBook-schijf kan gegevens vernietigen'](http://core.tweakers.net/nieuws/50195/ontwerpfout-macbook-schijf-kan-gegevens-vernietigen.html)
 
 ## Unsorted
 
