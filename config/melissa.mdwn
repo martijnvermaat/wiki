@@ -41,6 +41,9 @@ The LVM volume group contains LVM volumes:
 
 Install 'aumix' to adjust the volume of the sound chip.
 
+## Printer
+
+While te printer generally works, there have always been troubles with the USB connection. See this bug: [Brother HL-1430 USB printer will only print once](https://bugs.launchpad.net/ubuntu/dapper/+source/cupsys/+bug/57050). The fixes in this bug report also seem to work for now. Some other notes on USB printers which lose the connection are in [this report](http://uwstopia.nl/blog/2007/11/getting-my-samsung-ml-2010-printer-to-work), but I never used them.
 
 # User configuration
 
