@@ -1,0 +1,66 @@
+Desktop PC of Martijn in Utrecht with Ubuntu Gutsy Gibbon 7.10.
+
+# Hardware
+
+* 19" Samsung 193P TFT
+* Motherboard ASUS A7N8X-X
+* AMD Athlon XP 2500+ 1830 MHz
+* 512 MB RAM
+* Matrox Millennium G55 AGP
+* 120 GB Maxtor 6Y120P0
+* 8 GB Western Digital IDE
+* 200 GB Maxtor OneTouch III USB
+* ASUS CRW-5232AS CDRW
+
+# System configuration
+
+## Partitioning
+
+120 GB harddisk on /dev/hda:
+
+    /dev/hda1 mounted as / (20 GB)
+    /dev/hda5 swap (1.5 GB)
+    /dev/hda6 mounted as /home (rest of 120 GB)
+
+8 GB harddisk on /dev/hdb:
+
+    /dev/hdb1 mounted as /backup (8 GB)
+
+200 GB harddisk on /dev/sda
+
+    /dev/sda1 mounted as /media/usb-linux (185 GB)
+    /dev/sda2 mounted as /media/usb-windows (rest, FAT32 formatted)
+
+# Backups
+
+Backups should be made automatically and be reasonably up-to-date. Furthermore, some older snapshots should be available. Backups must not be stored on the primary hard drive and preferably on more than one location. Video files do not need to be in the backup. We don't need older snapshots of the music collection.
+
+There are also the Subversion repositories on <http://svn.vermaat.name/> that we want to backup. This is very important data, so we want to have an overdose of snapshots laying around (they don't take a lot of space).
+
+[copy-svn-backup](http://svn.vermaat.name/conf/home/priscilla/bin/copy-svn-backup) stores daily snapshots of all repositories in /backup/svn.
+
+[sync-backup](http://svn.vermaat.name/conf/home/priscilla/bin/sync-backup) mirrors /etc and /home/martijn (minus blacklisted files) to /backup/priscilla.
+
+[sync-usb](http://svn.vermaat.name/conf/home/priscilla/bin/sync-usb) mirrors /home/martijn/music and /backup/svn to the USB disk and maintains for every month a new mirror of /backup/priscilla.
+
+The blacklist file in /home/martijn/.backup-filter looks something like this:
+
+    /music
+    /.aMule
+    /.thumbnails
+    /.beagle
+    .svn
+    *Cache
+    *cache
+    *.wav
+    *.mp3
+    *.ogg
+    *.avi
+    *.mpeg
+    *.mpg
+    *.wmv
+    *.asf
+    *.wma
+    *.m4v
+
+The local backups take about 4GB each.
