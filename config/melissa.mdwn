@@ -12,7 +12,7 @@ Users:
 
 # Hardware
 
-* 19" Iiyama Vison Master Pro CRT
+* 19" Philips 190S7FS TFT
 * AMD Duron 750 MHz
 * 640 MB RAM
 * Matrox G450 AGP
