@@ -25,7 +25,7 @@ One 40 GB harddisk on /dev/hda:
 
 # Backups
 
-Backups should be made automatically and be reasonably up-to-date. Furthermore, some older snapshots should be available. Backups must not be stored on the primary hard drive.
+Backups should be made automatically and be reasonably up-to-date. Furthermore, some older snapshots should be available. Backups must not be stored on the primary hard drive. Video files and music do not need to be in the backup (music is stored on the USB disk anyway).
 
 This is achieved by synchronizing a copy of the data on the external USB disk every day. At the beginning of each month, a new copy is started. This way we can go back in time by months and always have a current copy of our data. The data consists of /etc and /home/rosanne with a blacklist.
 
