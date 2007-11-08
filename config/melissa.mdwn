@@ -1,4 +1,4 @@
-Desktop PC in [[sommelsdijk]] with Ubuntu Feisty Fawn 7.04.
+Desktop PC in [[sommelsdijk]] with Ubuntu Gutsy Gibbon 7.10.
 
 Users:
 
