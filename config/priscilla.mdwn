@@ -64,3 +64,5 @@ The blacklist file in /home/martijn/.backup-filter looks something like this:
     *.m4v
 
 The local backups take about 4GB each.
+
+Maybe it's time to analyse them and adapt the blacklist file. There are also a lot of checkouts of VCS repositories in the home directory and most of them would not need to be backuped.
