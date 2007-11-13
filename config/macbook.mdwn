@@ -130,6 +130,7 @@ investigate
 
 ## Ubuntu on MacBook
 
+* [How to install Ubuntu Gutsy on a Macbook](https://help.ubuntu.com/community/MacBook)
 * [Installing Ubuntu on a Macbook : Tutorial (beta)](http://ubuntu-tutorials.com/macbook-installation-beta.txt)
 * [Ubuntu Edgy on the MacBook](http://desrt.mcmaster.ca/macbook.xhtml)
 * [Installing Ubuntu Linux on a MacBook (Dual Boot)](http://bin-false.org/?p=17)
