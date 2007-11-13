@@ -130,7 +130,8 @@ investigate
 
 ## Ubuntu on MacBook
 
-* [Ubuntu Dapper on the MacBook](http://desrt.mcmaster.ca/macbook.xhtml)
+* [Installing Ubuntu on a Macbook : Tutorial (beta)](http://ubuntu-tutorials.com/macbook-installation-beta.txt)
+* [Ubuntu Edgy on the MacBook](http://desrt.mcmaster.ca/macbook.xhtml)
 * [Installing Ubuntu Linux on a MacBook (Dual Boot)](http://bin-false.org/?p=17)
 * [Ubuntu Linux Installing on an iNtel Macintosh](http://www.planetisaac.com/articles/ubuntuinstall.html)
 * [Ubuntu on MacBook Pro](http://www.ubuntuforums.org/showthread.php?t=198453&highlight=macbook)
