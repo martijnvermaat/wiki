@@ -4,4 +4,4 @@
 
 [How to setup a print server for Windows and others using Cups and Zeroconf](http://blog.venthur.de/2007/08/17/howto-setup-a-print-server-for-windows-and-others-using-cups-and-zeroconf/)
 
-[ Panasonic Lumix DMC-FZ8 Review](http://www.dpreview.com/reviews/panasonicfz7/)
+[Panasonic Lumix DMC-FZ8 Review](http://www.dpreview.com/reviews/PanasonicFZ8/)
