@@ -7,3 +7,5 @@
 [Panasonic Lumix DMC-FZ8 Review](http://www.dpreview.com/reviews/PanasonicFZ8/)
 
 [Call-by-need and continuation-passing style](http://www.springerlink.com/content/g07l7253r27m16n7/)
+
+[Representing Control](http://citeseer.ist.psu.edu/danvy92representing.html)
