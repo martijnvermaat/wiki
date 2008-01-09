@@ -9,3 +9,7 @@
 [Call-by-need and continuation-passing style](http://www.springerlink.com/content/g07l7253r27m16n7/)
 
 [Representing Control](http://citeseer.ist.psu.edu/75305.html)
+
+[Advanced Topicc in Logic (WISM 427)](http://www.math.uu.nl/Onderwijs/vakken/0708/Master/WISM427/)
+
+[Advanced Topics in Logic](http://www.math.uu.nl/people/jvoosten/advanced.html)
