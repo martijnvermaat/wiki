@@ -10,6 +10,6 @@
 
 [Representing Control](http://citeseer.ist.psu.edu/75305.html)
 
-[Advanced Topicc in Logic (WISM 427)](http://www.math.uu.nl/Onderwijs/vakken/0708/Master/WISM427/)
+[Advanced Topics in Logic (WISM 427)](http://www.math.uu.nl/Onderwijs/vakken/0708/Master/WISM427/)
 
 [Advanced Topics in Logic](http://www.math.uu.nl/people/jvoosten/advanced.html)
