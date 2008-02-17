@@ -1,7 +1,7 @@
 These are very incomplete notes on what would be the subject
 of my bachelor project: ways to obtain incompleteness
 results for formal systems. My bachelor project is now about
-[[correct_compilers]], but I might update these pages someday
+[[verifying_cps_transformations]], but I might update these pages someday
 when I persue the subject further in my spare time.
 
 # Roads to Incompleteness
