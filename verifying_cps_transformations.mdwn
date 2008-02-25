@@ -10,9 +10,25 @@
 ## CPS transformations
 
 * [Call-by-name, Call-by-value and the lambda-calculus](http://homepages.inf.ed.ac.uk/gdp/publications/cbn_cbv_lambda.pdf), G. D. Plotkin, 1975
+* [Representing control: A study of the CPS transformation](http://citeseer.ist.psu.edu/danvy92representing.html), O. Danvy, A. Filinski, 1992
 * [A First-Order One-Pass CPS Transformation](http://www.brics.dk/RS/01/49/), O. Danvy, L. R. Nielsen, 2001-12
 * [CPS Transformation of Beta-Redexes](http://www.brics.dk/RS/04/39/), O. Danvy, L. R. Nielsen, 2004-12
 
 ## Applications
 
 * [Compiling with Continuations](http://www.cs.princeton.edu/~appel/papers/cwc.html), Andrew W. Appel, 1992
+* [ORBIT: an optimizing compiler for Scheme](http://portal.acm.org/citation.cfm?id=13333), D. A. Kranz, R. Kelsey, J. Rees, P. Hudak, and J. Philbin, 1986
+
+
+## Background
+
+* [Mechanized metatheory for the masses: The POPLmark challenge](http://alliance.seas.upenn.edu/~plclub/cgi-bin/poplmark/index.php?title=The_POPLmark_Challenge), B. E. Aydemir et al, 2005
+* [Coq'Art: The Calculus of Inductive Constructions](http://www.labri.fr/perso/casteran/CoqArt/), Y. Bertot and P. Castéran, 2004
+* [A new extraction for Coq](http://www.springerlink.com/content/3114f6rp11b5qg24/), Letouzey, 2003
+* [The Coq proof assistant](http://coq.inria.fr/)
+
+## Related
+
+* [Translation validation for an optimizing compiler](http://citeseer.ist.psu.edu/necula00translation.html), G. C. Necula, 2000
+* [Translation validation](http://citeseer.ist.psu.edu/259363.html), A. Pnueli, M. Siegel, and E. Singerman, 1998
+* [A locally nameless solution to the POPLmark challenge](http://pauillac.inria.fr/~xleroy/POPLmark/locally-nameless/), X. Leroy, 2007
