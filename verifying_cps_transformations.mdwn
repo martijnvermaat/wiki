@@ -1,5 +1,7 @@
 [Subversion repository](http://svn.vermaat.name/documents/vu/bachelor-project/)
 
+Okay, this page is now pretty much obsolete. For literature, see [CiteULike](http://www.citeulike.org/user/mvermaat/tag/bachelor-project).
+
 # Literature
 
 ## Verification of CPS transformations
