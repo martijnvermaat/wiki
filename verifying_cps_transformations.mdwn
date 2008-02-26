@@ -15,6 +15,7 @@
 * [Representing control: A study of the CPS transformation](http://citeseer.ist.psu.edu/danvy92representing.html), O. Danvy, A. Filinski, 1992
 * [A First-Order One-Pass CPS Transformation](http://www.brics.dk/RS/01/49/), O. Danvy, L. R. Nielsen, 2001-12
 * [CPS Transformation of Beta-Redexes](http://www.brics.dk/RS/04/39/), O. Danvy, L. R. Nielsen, 2004-12
+* [Three Steps for the CPS Transformation](http://citeseer.ist.psu.edu/294520.html), O. Danvy, 1991
 
 ## Applications
 
