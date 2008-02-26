@@ -29,6 +29,8 @@
 * [Coq'Art: The Calculus of Inductive Constructions](http://www.labri.fr/perso/casteran/CoqArt/), Y. Bertot and P. Castéran, 2004
 * [A new extraction for Coq](http://www.springerlink.com/content/3114f6rp11b5qg24/), Letouzey, 2003
 * [The Coq proof assistant](http://coq.inria.fr/)
+* [An Introduction to Operational Semantics](http://www.cse.iitd.ernet.in/~sanjiva/opsem.ps), S. Prasad, S. Arun-Kumar, 2002
+* [Correspondence between Operational and Denotational Semantics](http://citeseer.ist.psu.edu/57893.html), C.-H. L. Ong, 1995
 
 ## Related
 
