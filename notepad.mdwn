@@ -15,3 +15,5 @@
 [Advanced Topics in Logic](http://www.math.uu.nl/people/jvoosten/advanced.html)
 
 [NEW PACKAGE: Printer drivers for Brother needed](https://bugs.launchpad.net/ubuntu/+bug/25966)
+
+[A New Approach to Abstract Syntax with Variable Binding](http://www.dcs.kcl.ac.uk/staff/jamie/papers/newaas-jv.ps.gz)
