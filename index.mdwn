@@ -13,7 +13,6 @@ Possible Master's project: [[correct_compilers]]
 * [[f-spot]]
 * [[config]]
 * [[incompleteness]]
-* [[ad-rem]]
 * [[recepten]]
 
 Taking notes: [[notepad]]
