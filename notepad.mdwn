@@ -19,3 +19,5 @@
 [A New Approach to Abstract Syntax with Variable Binding](http://www.dcs.kcl.ac.uk/staff/jamie/papers/newaas-jv.ps.gz)
 
 [A formal treatment of the barendregt variable convention in rule inductions](http://portal.acm.org/citation.cfm?id=1088454.1088458)
+
+[Barendregt's Convention](http://lambda-the-ultimate.org/node/2646)
