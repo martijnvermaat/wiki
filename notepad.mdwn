@@ -17,3 +17,5 @@
 [NEW PACKAGE: Printer drivers for Brother needed](https://bugs.launchpad.net/ubuntu/+bug/25966)
 
 [A New Approach to Abstract Syntax with Variable Binding](http://www.dcs.kcl.ac.uk/staff/jamie/papers/newaas-jv.ps.gz)
+
+[A formal treatment of the barendregt variable convention in rule inductions](http://portal.acm.org/citation.cfm?id=1088454.1088458)
