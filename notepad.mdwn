@@ -21,3 +21,11 @@
 [A formal treatment of the barendregt variable convention in rule inductions](http://portal.acm.org/citation.cfm?id=1088454.1088458)
 
 [Barendregt's Convention](http://lambda-the-ultimate.org/node/2646)
+
+[How to write your next POPL paper in Coq](http://www.cis.upenn.edu/~plclub/popl08-tutorial/)
+
+[Interactive Computer Theorem Proving](http://adam.chlipala.net/itp/)
+
+[A Syntactic Approach to Type Soundness](http://citeseer.ist.psu.edu/wright92syntactic.html)
+
+[Theorem proving support in programming language semantics](http://arxiv.org/abs/0707.0926)
