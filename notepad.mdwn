@@ -11,7 +11,3 @@
 [How to write your next POPL paper in Coq](http://www.cis.upenn.edu/~plclub/popl08-tutorial/)
 
 [Interactive Computer Theorem Proving](http://adam.chlipala.net/itp/)
-
-[A Syntactic Approach to Type Soundness](http://citeseer.ist.psu.edu/wright92syntactic.html)
-
-[Theorem proving support in programming language semantics](http://arxiv.org/abs/0707.0926)
