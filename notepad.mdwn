@@ -1,20 +1,10 @@
-[Charles Mingus Presents Charles Mingus](http://wc03.allmusic.com/cg/amg.dll?p=amg&sql=10:gxfwxqwgldte)
-
 [USB printer](http://uwstopia.nl/blog/2007/11/getting-my-samsung-ml-2010-printer-to-work)
 
 [How to setup a print server for Windows and others using Cups and Zeroconf](http://blog.venthur.de/2007/08/17/howto-setup-a-print-server-for-windows-and-others-using-cups-and-zeroconf/)
 
-[Panasonic Lumix DMC-FZ8 Review](http://www.dpreview.com/reviews/PanasonicFZ8/)
-
-[Call-by-need and continuation-passing style](http://www.springerlink.com/content/g07l7253r27m16n7/)
-
-[Representing Control](http://citeseer.ist.psu.edu/75305.html)
-
 [Advanced Topics in Logic (WISM 427)](http://www.math.uu.nl/Onderwijs/vakken/0708/Master/WISM427/)
 
 [Advanced Topics in Logic](http://www.math.uu.nl/people/jvoosten/advanced.html)
-
-[NEW PACKAGE: Printer drivers for Brother needed](https://bugs.launchpad.net/ubuntu/+bug/25966)
 
 [A New Approach to Abstract Syntax with Variable Binding](http://www.dcs.kcl.ac.uk/staff/jamie/papers/newaas-jv.ps.gz)
 
