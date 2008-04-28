@@ -11,3 +11,5 @@
 [How to write your next POPL paper in Coq](http://www.cis.upenn.edu/~plclub/popl08-tutorial/)
 
 [Interactive Computer Theorem Proving](http://adam.chlipala.net/itp/)
+
+http://iml.ece.mcgill.ca/~stephan/texgyre
