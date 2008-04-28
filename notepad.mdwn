@@ -13,3 +13,5 @@
 [Interactive Computer Theorem Proving](http://adam.chlipala.net/itp/)
 
 http://iml.ece.mcgill.ca/~stephan/texgyre
+
+http://www.matthewjmiller.net/howtos/create-a-curriculum-vitae-using-latex/
