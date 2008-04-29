@@ -20,3 +20,5 @@ Als je ook 'debconf-utils' installeert, heb je ook
 'debconf-get-selections' en 'debconf-set-selections', waarmee je de
 configuratievragen van packages kunt "voor-invullen".. scheelt ook weer
 tijd en uitzoekwerk bij het herinstalleren :)
+
+http://popey.com/Zattoo_Player_for_Ubuntu
