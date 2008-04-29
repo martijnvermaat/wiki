@@ -15,3 +15,8 @@
 http://iml.ece.mcgill.ca/~stephan/texgyre
 
 http://www.matthewjmiller.net/howtos/create-a-curriculum-vitae-using-latex/
+
+Als je ook 'debconf-utils' installeert, heb je ook
+'debconf-get-selections' en 'debconf-set-selections', waarmee je de
+configuratievragen van packages kunt "voor-invullen".. scheelt ook weer
+tijd en uitzoekwerk bij het herinstalleren :)
