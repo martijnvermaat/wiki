@@ -22,3 +22,5 @@ configuratievragen van packages kunt "voor-invullen".. scheelt ook weer
 tijd en uitzoekwerk bij het herinstalleren :)
 
 http://popey.com/Zattoo_Player_for_Ubuntu
+
+http://symposium.uscki.nl/index.php
