@@ -14,7 +14,6 @@ Possible Master's project: [[correct_compilers]]
 * [[config]]
 * [[incompleteness]]
 * [[recepten]]
-* [[calendar]]
 
 Taking notes: [[notepad]]
 
