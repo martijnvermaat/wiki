@@ -30,3 +30,5 @@ http://wiki.debian.org/SSLkeys
 http://homebank.free.fr
 
 http://www.grisbi.org/
+
+http://ubuntuforums.org/showthread.php?t=795327
