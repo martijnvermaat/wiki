@@ -11,3 +11,5 @@ On 'server':
     $ ssh -p 2022 localhost
 
 From <http://www.linuxgazette.com/node/2248>
+
+(On melissa, the shell script 'jadoemaardoen' sets up the forwarding through vermaat.name)
