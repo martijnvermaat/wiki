@@ -7,6 +7,13 @@ Convert all WMA files in this directory to WAV files:
       mv audiodump.wav "`basename "$i" .wma`.wav";
     done;
 
+# M4A to OGG
+
+    for i in *.m4a; do
+      echo "Converting: ${i%.m4a}.ogg"
+      faad -o - "$i" | oggenc -b 256 -a ARTIST -d DATE -l ALBUM -t TITLE -o "${i%.m4a}.ogg" -
+    done
+
 # APE with CUE sheet to OGG
 
 Convert an APE file with CUE sheet to OGG files:
