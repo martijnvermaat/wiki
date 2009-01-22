@@ -1,0 +1,13 @@
+Dell Mini 9
+
+# Hardware
+
+* blaa
+
+# Installation of Ubuntu 8.10
+
+Use unetbootin to create a installer image on an USB stick. Unfortunately, the alternate installer (needed to setup full / encryption) fails when it tries to detect the CD-ROM drive. See [bug 234185](https://bugs.launchpad.net/ubuntu/+source/debian-installer-utils/+bug/234185).
+
+In this bug it is suggested to use usb-creater from an Ubuntu 8.10 installation instead of unetbootin. Unfortunately, the USB stick created with usb-creater fails to boot at all.
+
+My hack: use unetbootin on the USB stick created with usb-creater and say no to all questions on overwriting files. Now we have an USB stick that boots (presumably due to unetbootin) and passes the CD-ROM drive detection (thanks to the installation from usb-creator which we didn't overwrite). Ugh.
