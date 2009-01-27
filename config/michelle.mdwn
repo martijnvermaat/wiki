@@ -11,6 +11,10 @@ Dell Mini 9
 
 # Installation of Ubuntu 8.10
 
+First flash the BIOS to a higher version than A00 (I have A04), using for example [flashBIOS ](http://stashbox.org/browse.php?q=flashBIOS) which boots DOS from USB.
+
+We want a small (100MB) /boot partition and encrypt the rest for use as / partition. No swap partition.
+
 Use unetbootin to create a installer image on an USB stick. Unfortunately, the alternate installer (needed to setup full / encryption) fails when it tries to detect the CD-ROM drive. See [bug 234185](https://bugs.launchpad.net/ubuntu/+source/debian-installer-utils/+bug/234185).
 
 In this bug it is suggested to use usb-creater from an Ubuntu 8.10 installation instead of unetbootin. Unfortunately, the USB stick created with usb-creater fails to boot at all.
@@ -58,3 +62,11 @@ The following /etc/wvdial.conf works with stock kernel 2.6.27-9-generic and Voda
     Phone = *99#
     Password = vodafone
     Username = vodafone
+
+Where 0000 above should be replaced with your PIN code. Use 'wvdial pin' to unlock the SIM, 'wvdial on' to turn on the radio, and 'wvdial connect' to connect. GPS data is available in /dev/ttyACM2 after 'wvdial gps'.
+
+# Links
+
+* [flashBIOS ](http://stashbox.org/browse.php?q=flashBIOS)
+* [Howto: Ubuntu 8.10, Dell 5530, 3G/WWan and GPS](http://www.bjw.me.uk/2008/12/howto-ubuntu-810-dell-5530-3gwwan-and.html)
+* []()
