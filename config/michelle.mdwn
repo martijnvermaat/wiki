@@ -65,8 +65,19 @@ The following /etc/wvdial.conf works with stock kernel 2.6.27-9-generic and Voda
 
 Where 0000 above should be replaced with your PIN code. Use 'wvdial pin' to unlock the SIM, 'wvdial on' to turn on the radio, and 'wvdial connect' to connect. GPS data is available in /dev/ttyACM2 after 'wvdial gps'.
 
+During connecting, Vodafone replies with
+
+    *ESTKSMENU: Vodafone,0,7
+    128,Vodafone service
+    129,Opvragen beltegoed
+    130,Opwaarderen
+    131,Instellingen
+    132,Gratis SMS Berichten
+    133,SMS Fun & Info
+    134,MMS info
+
 # Links
 
 * [flashBIOS ](http://stashbox.org/browse.php?q=flashBIOS)
 * [Howto: Ubuntu 8.10, Dell 5530, 3G/WWan and GPS](http://www.bjw.me.uk/2008/12/howto-ubuntu-810-dell-5530-3gwwan-and.html)
-* []()
+* [Betavine - UK Vodafone Dell Mini and Ubuntu?](http://www.betavine.net/bvportal/forums/index.html;jsessionid=6F48D7D9FB50AA6EB9490869AD3EEC1C?threadId=ff8080811d486810011d889b85df059c&postPage=2)
