@@ -2,7 +2,12 @@ Dell Mini 9
 
 # Hardware
 
-* blaa
+* Intel Atom 1.6GHz
+* 1GB SDRAM
+* 8.9" WSVGA (1024x600)
+* Intel GMA 950
+* 8GB SSD
+* Dell 5530, 3G/WWan and GPS
 
 # Installation of Ubuntu 8.10
 
@@ -11,3 +16,45 @@ Use unetbootin to create a installer image on an USB stick. Unfortunately, the a
 In this bug it is suggested to use usb-creater from an Ubuntu 8.10 installation instead of unetbootin. Unfortunately, the USB stick created with usb-creater fails to boot at all.
 
 My hack: use unetbootin on the USB stick created with usb-creater and say no to all questions on overwriting files. Now we have an USB stick that boots (presumably due to unetbootin) and passes the CD-ROM drive detection (thanks to the installation from usb-creator which we didn't overwrite). Ugh.
+
+# 3G Mobile Broadband
+
+The following /etc/wvdial.conf works with stock kernel 2.6.27-9-generic and Vodafone Mobile Broadband in The Netherlands:
+
+    [Dialer Defaults]
+    New PPPD = yes
+    Stupid Mode = 1
+    Modem Type = USB Modem
+
+    [Dialer signal]
+    Modem = /dev/ttyACM0
+    Init1 = AT+CSQ
+    Init2 = AT+COPS?
+
+    [Dialer gps]
+    Modem = /dev/ttyACM2
+    Init1 = AT*E2GPSCTL=1,2,1
+    Init2 = AT*E2GPSNPD
+
+    [Dialer on]
+    Modem = /dev/ttyACM0
+    Init1 = AT+CFUN=1
+
+    [Dialer off]
+    Modem = /dev/ttyACM0
+    Init1 = AT+CFUN=4
+
+    [Dialer pin]
+    Modem = /dev/ttyACM0
+    Init1 = AT+CPIN="0000"
+
+    [Dialer connect]
+    Modem = /dev/ttyACM1
+    Init1 = AT
+    Init2 = ATQ0 V1 E1 S0=0 &C1 &D2 +FCLASS=0
+    Init3 = AT+CGDCONT=1,"IP","office.vodafone.nl"
+    Baud = 460800
+    ISDN = 0
+    Phone = *99#
+    Password = vodafone
+    Username = vodafone
