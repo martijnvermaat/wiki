@@ -78,7 +78,7 @@ During connecting, Vodafone replies with
     133,SMS Fun & Info
     134,MMS info
 
-I don't know how to use these USSD codes yet (presumably something like AT+CUSD=1,"*#129#",19).
+I don't know how to use these USSD codes yet (presumably something like AT+CUSD=1,"*#129#",19 or AT*ESTKMENU=129).
 
 # Links
 
@@ -86,6 +86,7 @@ I don't know how to use these USSD codes yet (presumably something like AT+CUSD=
 * [flashBIOS ](http://stashbox.org/browse.php?q=flashBIOS)
 * [Howto: Ubuntu 8.10, Dell 5530, 3G/WWan and GPS](http://www.bjw.me.uk/2008/12/howto-ubuntu-810-dell-5530-3gwwan-and.html)
 * [Betavine - UK Vodafone Dell Mini and Ubuntu?](http://www.betavine.net/bvportal/forums/index.html;jsessionid=6F48D7D9FB50AA6EB9490869AD3EEC1C?threadId=ff8080811d486810011d889b85df059c&postPage=2)
+* [Dell Wireless 5530 - AT commands reference](http://www.natisbad.org/E4300/Dell_Wireless_5530_AT_cmd_ref.html)
 * [UMTS PCMCIA modem not picked up](https://bugs.edge.launchpad.net/ubuntu/+source/network-manager/+bug/248630)
 * [Network Manager detects but cannot connect with Dell 5530](https://bugs.launchpad.net/ubuntu/+source/network-manager/+bug/299274)
 * [Wireless WPA2 consistantly crashes the laptop](https://bugs.launchpad.net/dell-mini/+bug/300784)
