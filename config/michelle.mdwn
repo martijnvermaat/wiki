@@ -65,6 +65,8 @@ The following /etc/wvdial.conf works with stock kernel 2.6.27-9-generic and Voda
 
 Where 0000 above should be replaced with your PIN code. Use 'wvdial pin' to unlock the SIM, 'wvdial on' to turn on the radio, and 'wvdial connect' to connect. GPS data is available in /dev/ttyACM2 after 'wvdial gps'.
 
+From some kernel 2.6.27-11 on, the option module handles the 5530 and the /dev/ttyACM* are changed to /dev/ttyUSB*. I can no longer connect (but haven't done much testing).
+
 During connecting, Vodafone replies with
 
     *ESTKSMENU: Vodafone,0,7
@@ -75,6 +77,8 @@ During connecting, Vodafone replies with
     132,Gratis SMS Berichten
     133,SMS Fun & Info
     134,MMS info
+
+I don't know how to use this yet (presumably something like AT+CUSD=1,"*#129#",19).
 
 # Links
 
