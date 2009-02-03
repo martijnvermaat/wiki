@@ -84,6 +84,7 @@ I don't know how to use these USSD codes yet (presumably something like AT+CUSD=
 
 * [Dell Mini 9 on Launchpad](https://bugs.launchpad.net/dell-mini)
 * [Dell Mini 9 Ubuntu Community Documentation](https://help.ubuntu.com/community/DellMini9/Intrepid)
+* [MyDellMini Forum](http://www.mydellmini.com/forum/)
 * [flashBIOS ](http://stashbox.org/browse.php?q=flashBIOS)
 * [Howto: Ubuntu 8.10, Dell 5530, 3G/WWan and GPS](http://www.bjw.me.uk/2008/12/howto-ubuntu-810-dell-5530-3gwwan-and.html)
 * [Betavine - UK Vodafone Dell Mini and Ubuntu?](http://www.betavine.net/bvportal/forums/index.html;jsessionid=6F48D7D9FB50AA6EB9490869AD3EEC1C?threadId=ff8080811d486810011d889b85df059c&postPage=2)
