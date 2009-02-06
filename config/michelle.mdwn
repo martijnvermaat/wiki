@@ -65,7 +65,45 @@ The following /etc/wvdial.conf works with stock kernel 2.6.27-9-generic and Voda
 
 Where 0000 above should be replaced with your PIN code. Use 'wvdial pin' to unlock the SIM, 'wvdial on' to turn on the radio, and 'wvdial connect' to connect. GPS data is available in /dev/ttyACM2 after 'wvdial gps'.
 
-From some kernel 2.6.27-11 on, the option module handles the 5530 and the /dev/ttyACM\* are changed to /dev/ttyUSB\*. I can no longer connect (but haven't done much testing).
+From some kernel 2.6.27-11 on, the option module handles the 5530 and the /dev/ttyACM\* are changed to /dev/ttyUSB\*. Change wvdial.conf to reflect this:
+
+    [Dialer Defaults]
+    New PPPD = yes
+    Stupid Mode = 1
+    Modem Type = USB Modem
+
+    [Dialer signal]
+    Modem = /dev/ttyUSB10
+    Init1 = AT+CSQ
+    Init2 = AT+COPS?
+
+    [Dialer gps]
+    Modem = /dev/ttyUSB2
+    Init1 = AT*E2GPSCTL=1,2,1
+    Init2 = AT*E2GPSNPD
+
+    [Dialer on]
+    Modem = /dev/ttyUSB10
+    Init1 = AT+CFUN=1
+
+    [Dialer off]
+    Modem = /dev/ttyUSB10
+    Init1 = AT+CFUN=4
+
+    [Dialer pin]
+    Modem = /dev/ttyUSB10
+    Init1 = AT+CPIN="0000"
+
+    [Dialer connect]
+    Modem = /dev/ttyUSB4
+    Init1 = AT
+    Init2 = ATQ0 V1 E1 S0=0 &C1 &D2 +FCLASS=0
+    Init3 = AT+CGDCONT=1,"IP","office.vodafone.nl"
+    Baud = 460800
+    ISDN = 0
+    Phone = *99#
+    Password = vodafone
+    Username = vodafone
 
 During connecting, Vodafone replies with
 
@@ -78,7 +116,12 @@ During connecting, Vodafone replies with
     133,SMS Fun & Info
     134,MMS info
 
-I don't know how to use these USSD codes yet (presumably something like AT+CUSD=1,"\*#129#",19 or AT\*ESTKMENU=129).
+I don't know how to use these USSD codes yet (presumably something like AT+CUSD=1,"\*#129#",19 or AT\*ESTKMENU=129). The following seems to work sometimes:
+
+    [Dialer credit]
+    Modem = /dev/ttyUSB10
+    Init1 = AT+CUSD=1
+    Init2 = AT*ESTKMENU=129
 
 # Links
 
