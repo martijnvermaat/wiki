@@ -22,6 +22,13 @@ database (by default in ~/.gnome2/f-spot/photos.db) with this script:
 
     connection.commit()
 
+Update: sqlite3 features a replace function, and latest F-Spot seems to use a 'uri'
+column instead of a 'directory_path' column, so the above would become:
+
+    martijn@daphne:~$ sqlite3 photos.db 
+    SQLite version 3.5.9
+    Enter ".help" for instructions
+    sqlite> update photos set uri = replace(uri,'file:///home/vermaat/','file:///vermaat/');
 
 # Multi-user F-Spot
 
