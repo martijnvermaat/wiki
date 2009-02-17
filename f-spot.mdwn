@@ -53,6 +53,6 @@ new f-spot binary with database and photo locations as arguments:
 Create a new /usr/bin/f-spot with the following contents:
 
     #!/bin/sh
-    /usr/bin/f-spot.real -b /vermaat/photos -p /vermaat/photos
+    /usr/bin/f-spot.real -b /vermaat/photos -p /vermaat/photos "${@}"
 
 This should sort-of work in a multi-user environment.
