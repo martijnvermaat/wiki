@@ -30,6 +30,6 @@ From [Version Control with Subversion: Repository Maintenance](http://svnbook.re
 
 # Automated backups
 
-Make daily, weekly and monthly backups on the repository server with [an svnadmin dump script](http://svn.vermaat.name/conf/home/common/bin/svn-backup).
+Make daily, weekly and monthly backups on the repository server with [an svnadmin dump script](http://svn.vermaat.name/conf/home/dreamhost-vermaatsvn/bin/svn-backup).
 
-On other hosts, [use rsync](http://svn.vermaat.name/conf/home/common/bin/copy-svn-backup) to sync an offline backup with the latest daily backup on the repository server.
+On other hosts, [use rsync](http://svn.vermaat.name/conf/home/priscilla/bin/copy-svn-backup) to sync an offline backup with the latest daily backup on the repository server.
