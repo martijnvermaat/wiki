@@ -23,6 +23,18 @@ My hack: use unetbootin on the USB stick created with usb-creater and say no to 
 
 # 3G Mobile Broadband
 
+Network Manager in Ubuntu Jaunty can automatically connect with Vodafone Mobile Broadband (Netherlands) using these settings:
+
+    Number:    *99#
+    Username:  vodafone
+    Password:  vodafone
+    APN:       office.vodafone.nl
+    Network:
+    PIN:       0000
+    PUK:
+
+Below is how to use wvdial on Ubuntu Intrepid.
+
 The following /etc/wvdial.conf works with stock kernel 2.6.27-9-generic and Vodafone Mobile Broadband in The Netherlands:
 
     [Dialer Defaults]
