@@ -30,6 +30,10 @@ column instead of a 'directory_path' column, so the above would become:
     Enter ".help" for instructions
     sqlite> update photos set uri = replace(uri,'file:///home/vermaat/','file:///vermaat/');
 
+And a photo_version table is also added:
+
+    sqlite> update photo_version set uri = replace(uri,'file:///home/vermaat/','file:///vermaat/');
+
 # Multi-user F-Spot
 
 Currently, F-Spot (0.3.5) is not designed for managing a photo collection with more
