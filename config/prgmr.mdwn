@@ -48,4 +48,6 @@ Install some packages.
 
     aptitude install emacs bash-completion screen subversion
 
-http://book.prgmr.com/mediawiki/index.php/Tips_for_setting_up_Debian
+# Links
+
+[http://book.prgmr.com/mediawiki/index.php/Tips_for_setting_up_Debian](Tips for setting up Debian)
