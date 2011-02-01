@@ -1,3 +1,5 @@
+We choose an instance with the default Debian Lenny installation.
+
 # Setting up the system
 
     ssh-keygen -t rsa
