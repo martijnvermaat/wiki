@@ -1,0 +1,47 @@
+# Setting up the system
+
+  ssh-keygen -t rsa
+  # send ~/.ssh/id_rsa.pub to prgmr
+  ssh -i ~/.ssh/id_rsa martijn@stone.prgmr.com
+
+We are now in the console menu. Choose 1 to login as root using password 'password'. We start by upgrading to Debian Squeeze.
+
+  passwd
+  aptitude
+  # go to preferences (ctrl+t)
+  # disable automatic installation of recommended packages
+  # update
+  # upgrade
+  sed -i s/lenny/squeeze/g /etc/apt/sources.list
+  aptitude dist-upgrade
+  # repeat if necessary
+  # don't install the new grub!
+  aptitude install grub-legacy
+  update-grub
+  # make sure /boot/grub/menu.lst looks sane
+  shutdown -r now
+  # hope that the system comes up again
+  # login again from the console menu
+  aptitude dist-upgrade
+  # this extra dist-upgrade run is probably not needed
+
+Now that we have successfully upgraded to Squeeze, we add the first user and disable root.
+
+  adduser martijn
+  addgroup admin
+  adduser martijn admin
+  aptitude install sudo
+  echo '%admin ALL=(ALL) ALL' >> /etc/sudoers
+  # try to login as 'martijn' (at martijn.xen.prgmr.com)
+  sudo -l
+  # if we are ok, logout as root and disable root
+  sudo passwd -l root
+
+Configure aptitude.
+
+  echo 'aptitude::Get-Root-Command "sudo:/usr/bin/sudo";' > /etc/apt/apt.conf
+  aptitude
+  # go to preferences (ctrl+t)
+  # disable automatic installation of recommended packages
+
+http://book.prgmr.com/mediawiki/index.php/Tips_for_setting_up_Debian
