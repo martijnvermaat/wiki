@@ -4,7 +4,7 @@ We choose an instance with the default Debian Lenny installation.
 
     ssh-keygen -t rsa
     # send ~/.ssh/id_rsa.pub to prgmr
-    ssh -i ~/.ssh/id_rsa martijn@stone.prgmr.com
+    ssh -i ~/.ssh/id_rsa martijn@stone.prgmr.com  # stone can be something else
 
 We are now in the console menu. Choose 1 to login as root using password 'password'. We start by upgrading to Debian Squeeze.
 
