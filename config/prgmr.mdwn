@@ -50,6 +50,16 @@ Install some packages.
 
     aptitude install emacs bash-completion screen subversion
 
+# Services to migrate from the old system
+
+* Subversion server (via http)
+* rosanne.vermaat.name
+* vondellaan.vermaat.name
+* martijn.vermaat.name
+* janny.vermaat.name
+* deleesplank.nl
+* MySQL server
+
 # Links
 
 [Tips for setting up Debian](http://book.prgmr.com/mediawiki/index.php/Tips_for_setting_up_Debian)
