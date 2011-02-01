@@ -50,4 +50,4 @@ Install some packages.
 
 # Links
 
-[http://book.prgmr.com/mediawiki/index.php/Tips\_for\_setting\_up\_Debian](Tips for setting up Debian)
+[Tips for setting up Debian](http://book.prgmr.com/mediawiki/index.php/Tips_for_setting_up_Debian)
