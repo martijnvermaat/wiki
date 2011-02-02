@@ -52,7 +52,7 @@ Install some packages.
 
 Get some dot files.
 
-    svn co $SOME_SVN_REPO_URL .home
+    svn co $SOME\_SVN\_REPO\_URL .home
     ln -s ~martijn/.home/.bashrc
     ln -s ~martijn/.home/.inputrc
     ln -s ~martijn/.home/.emacs
