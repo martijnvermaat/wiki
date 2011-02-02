@@ -48,7 +48,17 @@ Configure aptitude.
 
 Install some packages.
 
-    aptitude install emacs bash-completion screen subversion
+    aptitude install emacs bash-completion screen subversion htop
+
+Get some dot files.
+
+    svn co $SOME_SVN_REPO_URL .home
+    ln -s ~martijn/.home/.bashrc
+    ln -s ~martijn/.home/.inputrc
+    ln -s ~martijn/.home/.emacs
+    ln -s ~martijn/.home/.profile
+    ln -s ~martijn/.home/.screenrc
+    ln -s ~martijn/.home/bin
 
 # Services to migrate from the old system
 
