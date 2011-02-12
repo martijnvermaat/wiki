@@ -1,6 +1,6 @@
 We choose an instance with the default Debian Lenny installation.
 
-# Setting up the system
+# Base system
 
     ssh-keygen -t rsa
     # send ~/.ssh/id_rsa.pub to prgmr
