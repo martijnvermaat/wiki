@@ -4,7 +4,7 @@ We choose an instance with the default Debian Lenny installation.
 
     ssh-keygen -t rsa
     # send ~/.ssh/id_rsa.pub to prgmr
-    ssh -i ~/.ssh/id_rsa martijn@stone.prgmr.com  # stone can be something else
+    ssh -i ~/.ssh/id_rsa username@stone.prgmr.com  # username, stone: can be something else
 
 We are now in the console menu. Choose 1 to login as root using password 'password'. We start by upgrading to Debian Squeeze.
 
@@ -59,6 +59,20 @@ Get some dot files.
     ln -s ~martijn/.home/.profile
     ln -s ~martijn/.home/.screenrc
     ln -s ~martijn/.home/bin
+
+# Security
+
+Run sshd on another port.
+
+    sed -i 's/Port 22/Port 404/' /etc/ssh/sshd_config
+
+We use the very simple iptables frontend ufw.
+
+    aptitude install ufw
+    sed -i s/22/404/g /etc/ufw/applications.d/openssh-server
+    ufw default deny
+    ufw allow OpenSSH
+    ufw enable
 
 # nginx
 
