@@ -130,6 +130,7 @@ Now install the packages we need.
     http://blogs.sitepoint.com/2010/11/19/lightning-fast-wordpress-with-php-fpm-and-nginx/
     http://wordpress.org/support/topic/nginx-php-fpm-php-apc-wordpress-multisite-subdirectory-wp-super-cache
     http://lekkernerden.nl/2011/02/php5-fpm-php5-apc-segfault/
+    http://news.ycombinator.com/item?id=2208760
 
 # Services to migrate from the old system
 
