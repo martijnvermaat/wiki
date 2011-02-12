@@ -121,6 +121,8 @@ Now install the packages we need.
 
 # MySQL
 
+Have a look at /usr/share/doc/mysql-server-5.1/examples for inspiration.
+
     aptitude install mysql-server mysql-client
     echo skip-innodb >> /etc/mysql/my.cnf  # and edit some memory settings
 
