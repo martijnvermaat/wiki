@@ -119,10 +119,8 @@ Now install the packages we need.
 
 # MySQL
 
-Edit MySQL configuration to make it use less memory. Most important is to add skip-bdb and skip-innodb.
-
     aptitude install mysql-server mysql-client
-    emacs /etc/mysql/my.cnf
+    echo skip-innodb >> /etc/mysql/my.cnf  # and edit some memory settings
 
 # Services to migrate from the old system
 
