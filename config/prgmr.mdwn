@@ -60,6 +60,21 @@ Get some dot files.
     ln -s ~martijn/.home/.screenrc
     ln -s ~martijn/.home/bin
 
+# nginx
+
+We want newer nginx from testing, so we add the testing repository to our sources and use pinning to set Squeeze as default repository.
+
+    echo 'deb http://ftp.us.debian.org/debian testing main' >> /etc/apt/sources.list
+    echo "Package: *
+    Pin: release n=squeeze
+    Pin-Priority: 900
+
+    Package: *
+    Pin: release a=testing
+    Pin-Priority: 100" > /etc/apt/preferences
+
+The nginx-light package only exists in testing, so it can just be installed by name.
+
 # Services to migrate from the old system
 
 * Subversion server (via http)
