@@ -2,8 +2,7 @@ We choose an instance with the default Debian Lenny installation.
 
 # Base system
 
-    ssh-keygen -t rsa
-    # send ~/.ssh/id_rsa.pub to prgmr
+    ssh-keygen -t rsa  # send ~/.ssh/id_rsa.pub to prgmr
     ssh -i ~/.ssh/id_rsa username@stone.prgmr.com  # username, stone: can be something else
 
 We are now in the console menu. Choose 1 to login as root using password 'password'. We start by upgrading to Debian Squeeze.
@@ -34,7 +33,7 @@ Now that we have successfully upgraded to Squeeze, we add the first user and dis
     adduser martijn admin
     aptitude install sudo
     echo '%admin ALL=(ALL) ALL' >> /etc/sudoers
-    # try to login as 'martijn' (at martijn.xen.prgmr.com)
+    # try to login as 'martijn' (at username.xen.prgmr.com)
     sudo -l
     # if we are ok, logout as root and disable root
     sudo passwd -l root
