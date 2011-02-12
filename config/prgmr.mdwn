@@ -87,7 +87,7 @@ We want newer nginx from testing, so we add the testing repository to our source
     Pin: release a=testing
     Pin-Priority: 100" > /etc/apt/preferences
 
-The nginx-light package only exists in testing, so it can just be installed by name.
+The nginx-light package only exists in testing, so it can be installed just by name.
 
 # Services to migrate from the old system
 
