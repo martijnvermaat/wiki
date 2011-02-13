@@ -133,6 +133,7 @@ Have a look at /usr/share/doc/mysql-server-5.1/examples for inspiration.
     http://lekkernerden.nl/2011/02/php5-fpm-php5-apc-segfault/
     http://news.ycombinator.com/item?id=2208760
     http://forum.slicehost.com/comments.php?DiscussionID=5099
+    http://wiki.nginx.org/Pitfalls
 
 # Services to migrate from the old system
 
