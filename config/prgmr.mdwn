@@ -135,6 +135,9 @@ Have a look at /usr/share/doc/mysql-server-5.1/examples for inspiration.
     http://forum.slicehost.com/comments.php?DiscussionID=5099
     http://wiki.nginx.org/Pitfalls
     http://wordpress.org/extend/plugins/nginx-compatibility/
+    http://danielmiessler.com/blog/optimizing-wordpress-with-nginx-varnish-w3-total-cache-amazon-s3-and-memcached
+    http://wordpress.org/extend/plugins/nginx-proxy-cache-integrator/
+    http://wordpress.org/extend/plugins/nginx-proxy-cache-purge/
 
 # Services to migrate from the old system
 
