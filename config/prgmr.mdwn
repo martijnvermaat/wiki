@@ -47,7 +47,7 @@ Configure aptitude.
 
 Install some packages.
 
-    aptitude install emacs bash-completion screen subversion htop
+    aptitude install emacs bash-completion screen subversion git htop
 
 Get some dot files.
 
