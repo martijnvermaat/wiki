@@ -139,6 +139,7 @@ Have a look at /usr/share/doc/mysql-server-5.1/examples for inspiration.
     http://wordpress.org/extend/plugins/nginx-proxy-cache-integrator/
     http://wordpress.org/extend/plugins/nginx-proxy-cache-purge/
     http://tonykwon.com/2010/12/nginx-fastcgi_cache-caveat/
+    http://forum.linode.com/viewtopic.php?p=34066&sid=5330e9d40f9733381e41accb2ad112e1#34077
 
 # Services to migrate from the old system
 
