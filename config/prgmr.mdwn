@@ -138,6 +138,7 @@ Have a look at /usr/share/doc/mysql-server-5.1/examples for inspiration.
     http://danielmiessler.com/blog/optimizing-wordpress-with-nginx-varnish-w3-total-cache-amazon-s3-and-memcached
     http://wordpress.org/extend/plugins/nginx-proxy-cache-integrator/
     http://wordpress.org/extend/plugins/nginx-proxy-cache-purge/
+    http://tonykwon.com/2010/12/nginx-fastcgi_cache-caveat/
 
 # Services to migrate from the old system
 
