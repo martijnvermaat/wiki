@@ -143,6 +143,10 @@ Have a look at /usr/share/doc/mysql-server-5.1/examples for inspiration.
     http://www.graq.co.uk/2010/12/super-fast-wordpress-nginx-caching-configuration/
     http://wordpress.org/extend/plugins/nginx-manager/
 
+Backup WordPress SVN checkout without upload dir:
+
+    rsync -a --exclude wp-content/uploads wordpress/ wordpress-3.0.5
+
 Build nginx-light with ngx_cache_purge module (remember not to do this on the live server):
 
     aptitude install build-essential devscripts
@@ -154,7 +158,7 @@ Build nginx-light with ngx_cache_purge module (remember not to do this on the li
     cd ..
     emacs rules  # add ngx_cache_purge-1.2 to modules
     cd ..
-    dch -i
+    dch -i  # Call this version 0.8.54-3.prgmr or something
     debuild -us -uc
 
 # Services to migrate from the old system
