@@ -91,6 +91,8 @@ The nginx-light package only exists in testing, so it can be installed just by n
     aptitude install nginx-light
     sed -i 's/worker_processes 4/worker_processes 1/' /etc/nginx/nginx.conf
 
+Update: actually, we rebuild this package with the ngx_cache_purge module included, see the WordPress section below.
+
 # PHP
 
 We want php5-fpm which is not in Debian (not even experimental at this moment). We get it from the Dotdeb repository.
@@ -129,6 +131,7 @@ Have a look at /usr/share/doc/mysql-server-5.1/examples for inspiration.
 # Wordpress
 
 Our WordPress setup is summarized as:
+
 * We track WordPress releases using Subversion and keep our own small set of modifications.
 * Use nginx as webserver.
 * Requests for PHP are passed to php5-fpm using fastcgi.
