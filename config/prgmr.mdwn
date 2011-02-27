@@ -61,7 +61,7 @@ Get some dot files.
 
 # Security
 
-Run sshd on another port.
+Run sshd on another port (well, this is not really security, but to keep our logs human-readable).
 
     sed -i 's/Port 22/Port 404/' /etc/ssh/sshd_config
 
@@ -127,6 +127,15 @@ Have a look at /usr/share/doc/mysql-server-5.1/examples for inspiration.
     echo skip-innodb >> /etc/mysql/my.cnf  # and edit some memory settings
 
 # Wordpress
+
+Our WordPress setup is summarized as:
+* We track WordPress releases using Subversion and keep our own small set of modifications.
+* Use nginx as webserver.
+* Requests for PHP are passed to php5-fpm using fastcgi.
+* The fastcgi forwards are cached by nginx.
+* Cached items can be purged by using ngx\_cache\_purge module.
+* On post publishing, relevant cached items are purged using Nginx Proxy Cache Purge plugin for WordPress.
+
 
 Before re-syncing the database with Dreamhost database, upgrade Dreamhost wordpress to same version.
 
