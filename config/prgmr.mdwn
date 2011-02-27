@@ -91,7 +91,7 @@ The nginx-light package only exists in testing, so it can be installed just by n
     aptitude install nginx-light
     sed -i 's/worker_processes 4/worker_processes 1/' /etc/nginx/nginx.conf
 
-Update: actually, we rebuild this package with the ngx_cache_purge module included, see the WordPress section below.
+Update: actually, we rebuild this package with the ngx\_cache\_purge module included, see the WordPress section below.
 
 # PHP
 
