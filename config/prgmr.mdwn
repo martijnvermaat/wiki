@@ -147,6 +147,8 @@ Before re-syncing the database with Dreamhost database, upgrade Dreamhost wordpr
 
 We mostly follow [these steps](http://codex.wordpress.org/Installing/Updating_WordPress_with_Subversion#Tracking_Stable_Versions).
 
+Todo: mail
+
 Backup WordPress SVN checkout without upload dir:
 
     rsync -a --exclude wp-content/uploads wordpress/ wordpress-3.0.5
