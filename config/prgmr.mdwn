@@ -156,6 +156,7 @@ Before re-syncing the database with Dreamhost database, upgrade Dreamhost wordpr
     http://forum.linode.com/viewtopic.php?p=34066&sid=5330e9d40f9733381e41accb2ad112e1#34077
     http://www.graq.co.uk/2010/12/super-fast-wordpress-nginx-caching-configuration/
     http://wordpress.org/extend/plugins/nginx-manager/
+    http://wordpress.org/extend/plugins/auto-image-resizer/
 
 We mostly follow [these steps](http://codex.wordpress.org/Installing/Updating_WordPress_with_Subversion#Tracking_Stable_Versions).
 
