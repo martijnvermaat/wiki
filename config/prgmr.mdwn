@@ -196,8 +196,9 @@ Note: [don't install python-beautifulsoup](http://www.jpichon.net/blog/2010/06/i
     cd venus
     python runtests.py
     cp examples/planet-schmanet.ini ../planet-martijn.ini
-    emacs ../planet-martijn.ini
-    python planet.py ../planet-martijn.ini
+    mkdir -p ../planet-martijn/www
+    emacs ../planet-martijn/planet-martijn.ini
+    python planet.py ../planet-martijn/planet-martijn.ini
     crontab -e
 
 # Services to migrate from the old system
