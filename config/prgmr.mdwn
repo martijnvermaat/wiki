@@ -184,7 +184,21 @@ Build nginx-light with ngx_cache_purge module (remember not to do this on the li
 
 See http://intertwingly.net/code/venus/
 
-    aptitude install python-beautifulsoup python-chardet python-genshi python-html5lib python-htmltmpl python-httplib2 python-librdf python-libxml2 python-libxslt1 python-lxml python-utidylib
+    aptitude install python-chardet python-genshi python-html5lib \
+      python-htmltmpl python-httplib2 python-librdf python-libxml2 \
+      python-libxslt1 python-lxml python-utidylib
+
+Note: [don't install python-beautifulsoup](http://www.jpichon.net/blog/2010/06/installing-planet-venus/).
+
+    mkdir ~planet
+    cd ~/planet
+    git clone https://github.com/rubys/venus.git
+    cd venus
+    python runtests.py
+    cp examples/planet-schmanet.ini ../planet-martijn.ini
+    emacs ../planet-martijn.ini
+    python planet.py ../planet-martijn.ini
+    crontab -e
 
 # Services to migrate from the old system
 
