@@ -180,6 +180,12 @@ Build nginx-light with ngx_cache_purge module (remember not to do this on the li
     dch -i  # Call this version 0.8.54-3.prgmr or something
     debuild -us -uc
 
+# Planet
+
+See http://intertwingly.net/code/venus/
+
+    aptitude install python-beautifulsoup python-chardet python-genshi python-html5lib python-htmltmpl python-httplib2 python-librdf python-libxml2 python-libxslt1 python-lxml python-utidylib
+
 # Services to migrate from the old system
 
 * Subversion server (via http)
@@ -189,6 +195,9 @@ Build nginx-light with ngx_cache_purge module (remember not to do this on the li
 * janny.vermaat.name
 * deleesplank.nl
 * MySQL server
+* wiki.vermaat.name
+* martijn.vermaat.name/planet
+* martijn.vermaat.name/kiek
 
 # Links
 
