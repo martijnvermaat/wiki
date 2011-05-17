@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>michelle</title>
+
+<link rel="stylesheet" href="../../style.css" type="text/css" />
+
+<link rel="stylesheet" href="../../local.css" type="text/css" />
+
+
+
+
+
+</head>
+<body>
+
+<div class="page">
+
+<div class="pageheader">
+<div class="header">
+<span>
+<span class="parentlinks">
+
+<a href="../../">wiki</a>/ 
+
+<a href="../">config</a>/ 
+
+</span>
+<span class="title">
+michelle
+
+</span>
+</span>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+<div id="pagebody">
+
+<div id="content">
+<p>Dell Mini 9</p>
+
+<h1>Hardware</h1>
+
+<ul>
+<li>Intel Atom 1.6GHz</li>
+<li>1GB SDRAM</li>
+<li>8.9" WSVGA (1024x600)</li>
+<li>Intel GMA 950</li>
+<li>8GB SSD</li>
+<li>Dell 5530, 3G/WWan and GPS</li>
+</ul>
+
+<h1>Installation of Ubuntu 8.10</h1>
+
+<p>First flash the BIOS to a higher version than A00 (I have A04), using for example <a href="http://stashbox.org/browse.php?q=flashBIOS">flashBIOS </a> which boots DOS from USB.</p>
+
+<p>We want a small (100MB) /boot partition and encrypt the rest for use as / partition. No swap partition.</p>
+
+<p>Use unetbootin to create a installer image on an USB stick. Unfortunately, the alternate installer (needed to setup full / encryption) fails when it tries to detect the CD-ROM drive. See <a href="https://bugs.launchpad.net/ubuntu/+source/debian-installer-utils/+bug/234185">bug 234185</a>.</p>
+
+<p>In this bug it is suggested to use usb-creater from an Ubuntu 8.10 installation instead of unetbootin. Unfortunately, the USB stick created with usb-creater fails to boot at all.</p>
+
+<p>My hack: use unetbootin on the USB stick created with usb-creater and say no to all questions on overwriting files. Now we have an USB stick that boots (presumably due to unetbootin) and passes the CD-ROM drive detection (thanks to the installation from usb-creator which we didn't overwrite). Ugh.</p>
+
+<h1>3G Mobile Broadband</h1>
+
+<p>Network Manager in Ubuntu Jaunty can automatically connect with Vodafone Mobile Broadband (Netherlands) using these settings:</p>
+
+<pre><code>Number:    *99#
+Username:  vodafone
+Password:  vodafone
+APN:       office.vodafone.nl
+Network:
+PIN:       0000
+PUK:
+</code></pre>
+
+<p>Below is how to use wvdial on Ubuntu Intrepid.</p>
+
+<p>The following /etc/wvdial.conf works with stock kernel 2.6.27-9-generic and Vodafone Mobile Broadband in The Netherlands:</p>
+
+<pre><code>[Dialer Defaults]
+New PPPD = yes
+Stupid Mode = 1
+Modem Type = USB Modem
+
+[Dialer signal]
+Modem = /dev/ttyACM0
+Init1 = AT+CSQ
+Init2 = AT+COPS?
+
+[Dialer gps]
+Modem = /dev/ttyACM2
+Init1 = AT*E2GPSCTL=1,2,1
+Init2 = AT*E2GPSNPD
+
+[Dialer on]
+Modem = /dev/ttyACM0
+Init1 = AT+CFUN=1
+
+[Dialer off]
+Modem = /dev/ttyACM0
+Init1 = AT+CFUN=4
+
+[Dialer pin]
+Modem = /dev/ttyACM0
+Init1 = AT+CPIN="0000"
+
+[Dialer connect]
+Modem = /dev/ttyACM1
+Init1 = AT
+Init2 = ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0
+Init3 = AT+CGDCONT=1,"IP","office.vodafone.nl"
+Baud = 460800
+ISDN = 0
+Phone = *99#
+Password = vodafone
+Username = vodafone
+</code></pre>
+
+<p>Where 0000 above should be replaced with your PIN code. Use 'wvdial pin' to unlock the SIM, 'wvdial on' to turn on the radio, and 'wvdial connect' to connect. GPS data is available in /dev/ttyACM2 after 'wvdial gps'.</p>
+
+<p>From some kernel 2.6.27-11 on, the option module handles the 5530 and the /dev/ttyACM* are changed to /dev/ttyUSB*. Change wvdial.conf to reflect this:</p>
+
+<pre><code>[Dialer Defaults]
+New PPPD = yes
+Stupid Mode = 1
+Modem Type = USB Modem
+
+[Dialer signal]
+Modem = /dev/ttyUSB10
+Init1 = AT+CSQ
+Init2 = AT+COPS?
+
+[Dialer gps]
+Modem = /dev/ttyUSB2
+Init1 = AT*E2GPSCTL=1,2,1
+Init2 = AT*E2GPSNPD
+
+[Dialer on]
+Modem = /dev/ttyUSB10
+Init1 = AT+CFUN=1
+
+[Dialer off]
+Modem = /dev/ttyUSB10
+Init1 = AT+CFUN=4
+
+[Dialer pin]
+Modem = /dev/ttyUSB10
+Init1 = AT+CPIN="0000"
+
+[Dialer connect]
+Modem = /dev/ttyUSB4
+Init1 = AT
+Init2 = ATQ0 V1 E1 S0=0 &amp;C1 &amp;D2 +FCLASS=0
+Init3 = AT+CGDCONT=1,"IP","office.vodafone.nl"
+Baud = 460800
+ISDN = 0
+Phone = *99#
+Password = vodafone
+Username = vodafone
+</code></pre>
+
+<p>During connecting, Vodafone replies with</p>
+
+<pre><code>*ESTKSMENU: Vodafone,0,7
+128,Vodafone service
+129,Opvragen beltegoed
+130,Opwaarderen
+131,Instellingen
+132,Gratis SMS Berichten
+133,SMS Fun &amp; Info
+134,MMS info
+</code></pre>
+
+<p>I don't know how to use these USSD codes yet (presumably something like AT+CUSD=1,"*#129#",19 or AT*ESTKMENU=129). The following seems to work sometimes:</p>
+
+<pre><code>[Dialer credit]
+Modem = /dev/ttyUSB10
+Init1 = AT+CUSD=1
+Init2 = AT*ESTKMENU=129
+</code></pre>
+
+<h1>Links</h1>
+
+<ul>
+<li><a href="https://bugs.launchpad.net/dell-mini">Dell Mini 9 on Launchpad</a></li>
+<li><a href="https://help.ubuntu.com/community/DellMini9/Intrepid">Dell Mini 9 Ubuntu Community Documentation</a></li>
+<li><a href="http://www.mydellmini.com/forum/">MyDellMini Forum</a></li>
+<li><a href="http://stashbox.org/browse.php?q=flashBIOS">flashBIOS </a></li>
+<li><a href="http://www.bjw.me.uk/2008/12/howto-ubuntu-810-dell-5530-3gwwan-and.html">Howto: Ubuntu 8.10, Dell 5530, 3G/WWan and GPS</a></li>
+<li><a href="http://www.betavine.net/bvportal/forums/index.html;jsessionid=6F48D7D9FB50AA6EB9490869AD3EEC1C?threadId=ff8080811d486810011d889b85df059c&amp;postPage=2">Betavine - UK Vodafone Dell Mini and Ubuntu?</a></li>
+<li><a href="http://www.natisbad.org/E4300/Dell_Wireless_5530_AT_cmd_ref.html">Dell Wireless 5530 - AT commands reference</a></li>
+<li><a href="https://bugs.edge.launchpad.net/ubuntu/+source/network-manager/+bug/248630">#248630 UMTS PCMCIA modem not picked up</a></li>
+<li><a href="https://bugs.launchpad.net/ubuntu/+source/network-manager/+bug/299274">#299274 Network Manager detects but cannot connect with Dell 5530</a></li>
+<li><a href="https://bugs.launchpad.net/dell-mini/+bug/300784">#300784 Wireless WPA2 consistantly crashes the laptop</a></li>
+<li><a href="https://bugs.launchpad.net/dell-mini/+bug/300563">#300563 Wireless (WPA) connection results in system lock-up</a></li>
+</ul>
+
+</div>
+
+
+
+
+
+</div>
+
+<div id="footer" class="pagefooter">
+
+<div id="pageinfo">
+
+
+
+
+<div id="backlinks">
+Links:
+
+<a href="../">config</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="pagedate">
+Last edited <span class="date">di 17 mei 2011 09:12:44 CEST</span>
+<!-- Created <span class="date">di 17 mei 2011 09:12:44 CEST</span> -->
+</div>
+
+</div>
+
+
+<!-- from wiki -->
+</div>
+
+</div>
+
+</body>
+</html>

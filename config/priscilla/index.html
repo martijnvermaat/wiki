@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>priscilla</title>
+
+<link rel="stylesheet" href="../../style.css" type="text/css" />
+
+<link rel="stylesheet" href="../../local.css" type="text/css" />
+
+
+
+
+
+</head>
+<body>
+
+<div class="page">
+
+<div class="pageheader">
+<div class="header">
+<span>
+<span class="parentlinks">
+
+<a href="../../">wiki</a>/ 
+
+<a href="../">config</a>/ 
+
+</span>
+<span class="title">
+priscilla
+
+</span>
+</span>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+<div id="pagebody">
+
+<div id="content">
+<p>Desktop PC of Martijn in Utrecht with Ubuntu Gutsy Gibbon 7.10.</p>
+
+<h1>Hardware</h1>
+
+<ul>
+<li>19" Samsung 193P TFT</li>
+<li>Motherboard ASUS A7N8X-X</li>
+<li>AMD Athlon XP 2500+ 1830 MHz</li>
+<li>512 MB RAM</li>
+<li>Matrox Millennium G55 AGP</li>
+<li>120 GB Maxtor 6Y120P0</li>
+<li>8 GB Western Digital IDE</li>
+<li>200 GB Maxtor OneTouch III USB</li>
+<li>ASUS CRW-5232AS CDRW</li>
+</ul>
+
+<h1>System configuration</h1>
+
+<h2>Partitioning</h2>
+
+<p>120 GB harddisk on /dev/hda:</p>
+
+<pre><code>/dev/hda1 mounted as / (20 GB)
+/dev/hda5 swap (1.5 GB)
+/dev/hda6 mounted as /home (rest of 120 GB)
+</code></pre>
+
+<p>8 GB harddisk on /dev/hdb:</p>
+
+<pre><code>/dev/hdb1 mounted as /backup (8 GB)
+</code></pre>
+
+<p>200 GB harddisk on /dev/sda</p>
+
+<pre><code>/dev/sda1 mounted as /media/usb-linux (185 GB)
+/dev/sda2 mounted as /media/usb-windows (rest, FAT32 formatted)
+</code></pre>
+
+<h1>Backups</h1>
+
+<p>Backups should be made automatically and be reasonably up-to-date. Furthermore, some older snapshots should be available. Backups must not be stored on the primary hard drive and preferably on more than one location. Video files do not need to be in the backup. We don't need older snapshots of the music collection.</p>
+
+<p>There are also the Subversion repositories on <a href="http://svn.vermaat.name/">http://svn.vermaat.name/</a> that we want to backup. This is very important data, so we want to have an overdose of snapshots laying around (they don't take a lot of space).</p>
+
+<p><a href="http://svn.vermaat.name/conf/home/priscilla/bin/copy-svn-backup">copy-svn-backup</a> stores daily snapshots of all repositories in /backup/svn.</p>
+
+<p><a href="http://svn.vermaat.name/conf/home/priscilla/bin/sync-backup">sync-backup</a> mirrors /etc and /home/martijn (minus blacklisted files) to /backup/priscilla.</p>
+
+<p><a href="http://svn.vermaat.name/conf/home/priscilla/bin/sync-usb">sync-usb</a> mirrors /home/martijn/music and /backup/svn to the USB disk and maintains for every month a new mirror of /backup/priscilla.</p>
+
+<p>The blacklist file in /home/martijn/.backup-filter looks something like this:</p>
+
+<pre><code>/music
+/.aMule
+/.thumbnails
+/.beagle
+.svn
+*Cache
+*cache
+*.wav
+*.mp3
+*.ogg
+*.avi
+*.mpeg
+*.mpg
+*.wmv
+*.asf
+*.wma
+*.m4v
+</code></pre>
+
+<p>The local backups take about 4GB each.</p>
+
+<p>Maybe it's time to analyse them and adapt the blacklist file. There are also a lot of checkouts of VCS repositories in the home directory and most of them would not need to be backuped.</p>
+
+</div>
+
+
+
+
+
+</div>
+
+<div id="footer" class="pagefooter">
+
+<div id="pageinfo">
+
+
+
+
+<div id="backlinks">
+Links:
+
+<a href="../">config</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="pagedate">
+Last edited <span class="date">di 17 mei 2011 09:12:44 CEST</span>
+<!-- Created <span class="date">di 17 mei 2011 09:12:44 CEST</span> -->
+</div>
+
+</div>
+
+
+<!-- from wiki -->
+</div>
+
+</div>
+
+</body>
+</html>

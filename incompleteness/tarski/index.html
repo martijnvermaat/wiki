@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>tarski</title>
+
+<link rel="stylesheet" href="../../style.css" type="text/css" />
+
+<link rel="stylesheet" href="../../local.css" type="text/css" />
+
+
+
+
+
+</head>
+<body>
+
+<div class="page">
+
+<div class="pageheader">
+<div class="header">
+<span>
+<span class="parentlinks">
+
+<a href="../../">wiki</a>/ 
+
+<a href="../">incompleteness</a>/ 
+
+</span>
+<span class="title">
+tarski
+
+</span>
+</span>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+<div id="pagebody">
+
+<div id="content">
+<p>Incompleteness proof based on truth sets.</p>
+
+<p>Popular version of Tarski's Theorem:</p>
+
+<blockquote>
+  <p>Truth (within the system) is not definable (within the system) (for systems of sufficient strength)</p>
+</blockquote>
+
+<p>Precise version:</p>
+
+<p>For any language L, if</p>
+
+<ul>
+<li>for any set A expressible in L, the set A* is expressible in L, and</li>
+<li>for any set A expressible in L, the complement of A is expressible in L, then</li>
+</ul>
+
+<p>the set T of Goedel numbers of the true sentences of L is not expressible in L.</p>
+
+<p>(Where A* is the set of all n with d(n) in A and d the <span class="createlink">diagonal function</span>).</p>
+
+<p><span class="createlink">toggle id&#61;tarski text&#61;&#34;Proof&#34;</span>
+<span class="createlink">toggleable id=tarski text="""</p>
+
+<blockquote>
+  <p>Assume hypotheses. If the set T were expressible in L, also the complement of T would be expressible in L and thus a [[Goedel sentence</span> for the complement of T would exist (<span class="createlink">diagonal lemma</span>). But trivially, this Goedel sentence cannot exist (it would be true iff it were not true).
+"""]]</p>
+</blockquote>
+
+<p>Now, consider PA. For any set Arithmetic set A (Arithmetic = expressible in PA), A* and the complement of A are also Arithmetic. Tarski's Theorem tells us that the set T of Goedel numbers of true arithmetic sentences is not Arithmetic.</p>
+
+<p>However, the set P of Goedel numbers of provable arithmetic sentences (provable in PA) is Arithmetic.</p>
+
+<p>We conclude that T and P don't coincide. Assuming consistency of PA, there must be a true arithmetic sentence which is not provable in PA. This sentence is also not disprovable (again, by the consistency assumption), so PA is incomplete.</p>
+
+</div>
+
+
+
+
+
+</div>
+
+<div id="footer" class="pagefooter">
+
+<div id="pageinfo">
+
+
+
+
+<div id="backlinks">
+Links:
+
+<a href="../">incompleteness</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="pagedate">
+Last edited <span class="date">di 17 mei 2011 09:12:44 CEST</span>
+<!-- Created <span class="date">di 17 mei 2011 09:12:44 CEST</span> -->
+</div>
+
+</div>
+
+
+<!-- from wiki -->
+</div>
+
+</div>
+
+</body>
+</html>

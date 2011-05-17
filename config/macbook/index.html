@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>macbook</title>
+
+<link rel="stylesheet" href="../../style.css" type="text/css" />
+
+<link rel="stylesheet" href="../../local.css" type="text/css" />
+
+
+
+
+
+</head>
+<body>
+
+<div class="page">
+
+<div class="pageheader">
+<div class="header">
+<span>
+<span class="parentlinks">
+
+<a href="../../">wiki</a>/ 
+
+<a href="../">config</a>/ 
+
+</span>
+<span class="title">
+macbook
+
+</span>
+</span>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+<div id="pagebody">
+
+<div id="content">
+<p>Some notes on Lennert's MacBook with Ubuntu.</p>
+
+<p>Most of these notes were written during installation of Ubuntu Edgy Eft 6.10
+on the laptop and have to be updated to reflect Ubuntu Feisty Fawn 7.04 status.</p>
+
+<h1>Hardware</h1>
+
+<p>Apple MacBook (first generation):</p>
+
+<ul>
+<li>13.3" met 1280x800 resolutie</li>
+<li>Intel Core Duo 1.83 GHz</li>
+<li>1 GB 667-MHz DDR2 SDRAM</li>
+<li>Intel GMA 950 videokaart</li>
+<li>5400 RPM SATA harddisk van 60 GB</li>
+<li>dvd-rom/cd-rw combo</li>
+<li>AirPort Extreme Wireless</li>
+<li>iSight Camera</li>
+<li>Apple Remote</li>
+</ul>
+
+<h1>General configuration</h1>
+
+<p>Main OS is Ubuntu Feisty Fawn 7.04. Keep MacOSX as alternative boot option for
+firmware updates.</p>
+
+<h1>System configuration</h1>
+
+<h2>Security</h2>
+
+<p>Use <a href="http://rocky.molphys.leidenuniv.nl/">Arno's IPTables firewall</a>.</p>
+
+<p>Encrypted filesystems would be nice. Not configured at this point.</p>
+
+<p>The Ubuntu installer (as of Ubuntu Edgy Eft 6.10) has no support for dm-crypt,
+so it is a pain to setup an encrypted / and swap (i.e. everything but /boot).</p>
+
+<h2>Installing Ubuntu</h2>
+
+<p>Use the MacOS X installation DVD to change the partition table from GUID to
+msdos. After this we are ready to boot the Ubuntu alternate installation CD.</p>
+
+<p>Boot installtion in expert mode. To have a working keyboard and a booting kernel,
+use these parameters:</p>
+
+<pre><code>noapic acpi=force irqpoll
+</code></pre>
+
+<p>Kernel panics appear to be very common on the MacBook's dual core. See <a href="http://blog.mobiledude.com/articles/2006/08/20/apple-macbook-dual-booting-ubuntu-linux hier">this page</a>:</p>
+
+<blockquote>
+  <p>One last thing to note is that Linux will often produce a kernel panic during
+boot. This is due to an APIC timing problem. If you reboot, normally the timing
+problem goes away (you may have to reboot more than once). A more permanent
+solution is to recompile the kernel to use a timing frequency of 1000Hz instead
+of 250Hz, but I will leave the details of that process as an exercise for the
+reader (hint: comment #152 on <a href="http://bin-false.org/?p=17">this page</a> has some
+pointers).</p>
+</blockquote>
+
+<p>See also <a href="https://launchpad.net/distros/ubuntu/+bug/54621">bug #54621</a> for a
+possible solution.</p>
+
+<p>So far, this parameter seems to work:</p>
+
+<pre><code>lpj=8000000
+</code></pre>
+
+<p>Choose manual partitioning. Remove all partitions. Add a 250MB ext3 /boot partition.
+The rest is for LVM. In the LVM group create an 8GB ext3 / partition (lvm-root),
+a 1.5GB swap partition (lvm-swap) end use the remaining space for an ext3
+partition (lvm-home). Mount lvm-home at /home.</p>
+
+<h2>Wireless networking</h2>
+
+<p>The network-manager package is installed by default since Ubuntu Feisty and it will
+work fine with the Intel chipset.</p>
+
+<p>WPA keys are stored in gnome-keyring-manager, which is password-protected. This is
+kind of annoying, but there exists some dirty workaround for entering your password
+twice every time (uses pam-keyring, yet to investigate).</p>
+
+<h2>iSight</h2>
+
+<p>We follow <a href="http://www.ubuntuforums.org/showthread.php?t=225621">this page</a> which
+describes how to use <a href="http://blogs.gnome.org/view/rbultje/2006/07/21/0">this driver</a>.</p>
+
+<p>Install module-assistant and debhelper. Install linux-uvc-source from <a href="http://packages.debian.org/unstable/graphics/linux-uvc-source">here</a>
+and make the module with:</p>
+
+<pre><code>sudo m-a prepare
+sudo m-a a-i linux-uvc
+</code></pre>
+
+<p>After this, install linux-uvc-tools from <a href="http://packages.debian.org/unstable/graphics/linux-uvc-tools">here</a>.
+At this point we need the firmware from a MacOS X installation which was hosed when writing this.</p>
+
+<h1>User configuration</h1>
+
+<h2>Mail</h2>
+
+<p>Use XS4ALL spam filter to gain 500MB of space on the mail server. Push old XS4ALL
+mailbox from Thunderbird to the mail server via IMAP.</p>
+
+<p>Evolution with <a href="http://www.xs4all.nl/helpdesk/software/email/imap/">XS4ALL mail via IMAP</a>
+(with IMAP IDLE) and <a href="http://www.uu.nl/uupublish/homeuu/diensten/homeubend/universitairebes/bestuursdienst/directieinformat/watwedoen/solismailvoorstu/imapclient/17776main.html">Solis-mail via IMAP</a> Solis-mail via IMAP]. Use Evolution Bogofilter plugin for local spam filtering.</p>
+
+<p>Warande uses <a href="http://www.sshunet.nl/mailrelays.html">SSHUnet</a> which blocks port
+25, so using smtp.sshunet.nl is mandatory. Unfortunately, smtp.sshunet is of
+course blocked from outside SSHUnet, so on other locations smtp.xs4all.nl has to
+be used (with authentication).</p>
+
+<h2>Backup</h2>
+
+<p>Use some sort of rsync script to backup home directory and /etc to remote storage.</p>
+
+<h2>DVD playback</h2>
+
+<p>Probably use libdvdcss2 and regionset.</p>
+
+<h1>Open issues</h1>
+
+<ul>
+<li>VMWare Player installation fails due to networking problems I still have to
+investigate</li>
+<li>iSight camera</li>
+<li>Remote control</li>
+<li>The laptop gets very hot (power management seems somewhat broken)</li>
+<li>Suspend</li>
+</ul>
+
+<h1>Links</h1>
+
+<h2>Ubuntu on MacBook</h2>
+
+<ul>
+<li><a href="https://help.ubuntu.com/community/MacBook">How to install Ubuntu Gutsy on a Macbook</a></li>
+<li><a href="http://ubuntu-tutorials.com/macbook-installation-beta.txt">Installing Ubuntu on a Macbook : Tutorial (beta)</a></li>
+<li><a href="http://desrt.mcmaster.ca/macbook.xhtml">Ubuntu Edgy on the MacBook</a></li>
+<li><a href="http://bin-false.org/?p=17">Installing Ubuntu Linux on a MacBook (Dual Boot)</a></li>
+<li><a href="http://www.planetisaac.com/articles/ubuntuinstall.html">Ubuntu Linux Installing on an iNtel Macintosh</a></li>
+<li><a href="http://www.ubuntuforums.org/showthread.php?t=198453&amp;highlight=macbook">Ubuntu on MacBook Pro</a></li>
+<li><a href="http://www.ubuntuforums.org/showthread.php?t=233243">HOWTO: Install Ubuntu on a MacBook and use GRUB to boot</a></li>
+<li><a href="http://ubuntuforums.org/showthread.php?t=255068">macbook pro: fedora 6 vs edgy</a></li>
+<li><a href="http://www.xs4all.nl/~hajk/mbook-install.pdf">Dual-booting Mac OS X and Ubuntu on an Apple MacBook laptop</a> (PDF)</li>
+<li><a href="http://www.ubuntuforums.org/showthread.php?t=346767">Ubuntu Forums - Feisty on a macbook</a></li>
+</ul>
+
+<h2>Linux on MacBook</h2>
+
+<ul>
+<li><a href="http://www.mactel-linux.org/wiki/Main_Page">Mactel-Linux</a></li>
+<li><a href="http://wiki.debian.org/MacBook">MacBook - Debian Wiki</a></li>
+</ul>
+
+<h2>Ubuntu bugs</h2>
+
+<ul>
+<li><a href="https://launchpad.net/distros/ubuntu/+source/linux-source-2.6.17/+bug/61223">#61223: macbook trackpad support</a></li>
+<li><a href="https://launchpad.net/distros/ubuntu/+source/linux-source-2.6.17/+bug/61500">#61500: macbook ir support</a></li>
+<li><a href="https://launchpad.net/distros/ubuntu/+source/linux-source-2.6.17/+bug/61502">#61502: macbook backlight support</a></li>
+<li><a href="https://launchpad.net/distros/ubuntu/+source/metacity/+bug/59947">#59947: False compositing activation</a></li>
+<li><a href="https://launchpad.net/distros/ubuntu/+source/linux-source-2.6.15/+bug/52852">#52852: MacBook gets extremely hot under Linux</a></li>
+<li><a href="https://launchpad.net/distros/ubuntu/+source/evolution/+bug/9870">#9870: Better spam filtering for Evolution</a></li>
+<li><a href="https://bugs.launchpad.net/ubuntu/+source/linux-source-2.6.22/+bug/151016">#151016: New in 2.6.22-13: System doesn't always wake from suspend</a></li>
+<li><a href="https://launchpad.net/ubuntu/+bugs?field.tag=macbook">Bugs tagged 'macbook'</a></li>
+</ul>
+
+<h2>Encrypted filesystem</h2>
+
+<ul>
+<li><a href="https://help.ubuntu.com/community/EncryptedFilesystem">Encrypted Filesystem</a></li>
+<li><a href="https://help.ubuntu.com/community/EncryptedFilesystemHowto">Encrypted Filesystem Howto</a></li>
+<li><a href="https://help.ubuntu.com/community/EncryptedFilesystemHowto2">Encrypted Filesystem Howto 2</a></li>
+<li><a href="https://help.ubuntu.com/community/EncryptedFilesystemHowto3">Encrypted Filesystem Howto 3</a></li>
+<li><a href="https://help.ubuntu.com/community/EncryptedFilesystemHowto4">Encrypted Filesystem Howto 4</a></li>
+<li><a href="https://help.ubuntu.com/community/EncryptedFilesystemHowto5">Encrypted Filesystem Howto 5</a></li>
+<li><a href="https://help.ubuntu.com/community/EncryptedFilesystemLVMHowto">Encrypted Filesystem LVM Howto</a></li>
+<li><a href="http://www.hermann-uwe.de/blog/benchmarking-an-encrypted-dm-crypt-lvm-ext3-selinux-hard-drive-with-bonnie-and-hdparm">Benchmarking dm-crypt</a></li>
+<li><a href="http://changelog.complete.org/posts/541-Disk-encryption-support-in-Etch.html">Disk encryption support in Etc</a></li>
+</ul>
+
+<h2>iSight</h2>
+
+<ul>
+<li><a href="http://blogs.gnome.org/view/rbultje/2006/09/21/0">Updated Linux driver for the Apple iSight</a></li>
+<li><a href="http://www.ubuntuforums.org/showthread.php?t=225621">Built-in iSight Howto, Intel Mac (iMac, MacBook)</a></li>
+<li><a href="http://johannes.sipsolutions.net/MacBook/iSight">MacBook iSight</a></li>
+<li><a href="http://www.netfort.gr.jp/~dancer/diary/daily/2007-Jan-22.html.en#2007-Jan-22-00:57:28">iSight video opnemen</a></li>
+</ul>
+
+<h2>Misc hardware</h2>
+
+<ul>
+<li><a href="http://ubuntu.wordpress.com/2006/09/20/disable-touchpad-temporarily-when-typing/">Disable Touchpad Temporarily When Typing</a></li>
+<li><a href="http://ubuntuforums.org/showthread.php?t=215801">MacBook: Control the brightness by a key</a></li>
+<li><a href="http://www.apple.com/downloads/macosx/apple/macbooksmcfirmwareupdate.html">SMC Firmware Update</a> (better fan policy for cooling)</li>
+<li><a href="http://packages.ubuntu.com/feisty/utils/gpomme">gpomme handles the hotkeys</a></li>
+<li><a href="http://ubuntu-tutorials.com/2007/10/31/enabling-the-motion-sensor-on-the-macbook-for-physical-neverball/">Enabling the Motion Sensor on the Macbook for Physical Neverball!</a></li>
+<li><a href="http://ubuntudemon.wordpress.com/2007/10/28/laptop-hardrive-killer-bug-how-to-discover-whether-you-are-affected/">Laptop Hardrive Killer Bug - How to discover whether you are affected</a></li>
+<li><a href="http://core.tweakers.net/nieuws/50195/ontwerpfout-macbook-schijf-kan-gegevens-vernietigen.html">'Ontwerpfout MacBook-schijf kan gegevens vernietigen'</a></li>
+</ul>
+
+<h2>Unsorted</h2>
+
+<ul>
+<li><a href="http://www.hermann-uwe.de/blog/towards-a-moderately-paranoid-debian-laptop-setup">Towards a moderately paranoid Debian laptop setup</a></li>
+<li><a href="http://www.cs.uu.nl/~koos/linux-8021x-solis-air.html">Solis-air access under Linux</a></li>
+<li><a href="http://www.dtek.chalmers.se/groups/dvd/deb/">libdvdcss packages</a></li>
+<li><a href="http://gathering.tweakers.net/forum/list_messages/1191546">Eduroam Wireless</a></li>
+<li><a href="http://ubuntu-tutorials.com/2007/06/03/remapping-the-function-key-behavior-on-macbook-macbook-pro/">Remapping the Function Key Behaviour on Macbook / Macbook Pro</a></li>
+</ul>
+
+</div>
+
+
+
+
+
+</div>
+
+<div id="footer" class="pagefooter">
+
+<div id="pageinfo">
+
+
+
+
+<div id="backlinks">
+Links:
+
+<a href="../">config</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="pagedate">
+Last edited <span class="date">di 17 mei 2011 09:12:44 CEST</span>
+<!-- Created <span class="date">di 17 mei 2011 09:12:44 CEST</span> -->
+</div>
+
+</div>
+
+
+<!-- from wiki -->
+</div>
+
+</div>
+
+</body>
+</html>

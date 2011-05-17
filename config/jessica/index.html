@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jessica</title>
+
+<link rel="stylesheet" href="../../style.css" type="text/css" />
+
+<link rel="stylesheet" href="../../local.css" type="text/css" />
+
+
+
+
+
+</head>
+<body>
+
+<div class="page">
+
+<div class="pageheader">
+<div class="header">
+<span>
+<span class="parentlinks">
+
+<a href="../../">wiki</a>/ 
+
+<a href="../">config</a>/ 
+
+</span>
+<span class="title">
+jessica
+
+</span>
+</span>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+<div id="pagebody">
+
+<div id="content">
+<p>Desktop PC of Rosanne in Utrecht with Ubuntu Gutsy Gibbon 7.10.</p>
+
+<h1>Hardware</h1>
+
+<ul>
+<li>17" Philips 107 T5 CRT</li>
+<li>Motherboard ASUS A7N8X-X</li>
+<li>AMD Athlon XP 2500+ 1837 MHz</li>
+<li>512 MB RAM</li>
+<li>ATI Radeon 7000/VE</li>
+<li>40 GB Maxtor 6E040L0 IDE</li>
+<li>320 GB Maxtor 3200 USB</li>
+<li>YES we have a floppy drive</li>
+<li>NO we don't have a CDRW, but YES we have a CD-ROM</li>
+<li>Ralink USB 802.11 bg WLAN (yes this one sucks)</li>
+</ul>
+
+<h1>System configuration</h1>
+
+<h2>Partitioning</h2>
+
+<p>One 40 GB harddisk on /dev/hda:</p>
+
+<pre><code>/dev/hda1 mounted as / (4.6 GB)
+/dev/hda2 swap (1.2 GB)
+/dev/hda3 mounted as /home (rest of 40 GB)
+</code></pre>
+
+<h1>Backups</h1>
+
+<p>Backups should be made automatically and be reasonably up-to-date. Furthermore, some older snapshots should be available. Backups must not be stored on the primary hard drive. Video files and music do not need to be in the backup (music is stored on the USB disk anyway).</p>
+
+<p>This is achieved by synchronizing a copy of the data on the external USB disk every day. At the beginning of each month, a new copy is started. This way we can go back in time by months and always have a current copy of our data. The data consists of /etc and /home/rosanne with a blacklist.</p>
+
+<p>This script is run by root every morning: <a href="http://svn.vermaat.name/conf/home/jessica/bin/sync-backup">sync-backup</a></p>
+
+<p>The blacklist file in /home/rosanne/.backup-filter looks something like this:</p>
+
+<pre><code>/music
+/.aMule
+/.thumbnails
+/.beagle
+.svn
+*Cache
+*cache
+*.wav
+*.mp3
+*.ogg
+*.avi
+*.mpeg
+*.mpg
+*.wmv
+*.asf
+*.wma
+*.m4v
+</code></pre>
+
+<p>This makes for backup snapshots of around 400MB.</p>
+
+</div>
+
+
+
+
+
+</div>
+
+<div id="footer" class="pagefooter">
+
+<div id="pageinfo">
+
+
+
+
+<div id="backlinks">
+Links:
+
+<a href="../">config</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="pagedate">
+Last edited <span class="date">di 17 mei 2011 09:12:44 CEST</span>
+<!-- Created <span class="date">di 17 mei 2011 09:12:44 CEST</span> -->
+</div>
+
+</div>
+
+
+<!-- from wiki -->
+</div>
+
+</div>
+
+</body>
+</html>

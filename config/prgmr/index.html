@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>prgmr</title>
+
+<link rel="stylesheet" href="../../style.css" type="text/css" />
+
+<link rel="stylesheet" href="../../local.css" type="text/css" />
+
+
+
+
+
+</head>
+<body>
+
+<div class="page">
+
+<div class="pageheader">
+<div class="header">
+<span>
+<span class="parentlinks">
+
+<a href="../../">wiki</a>/ 
+
+<a href="../">config</a>/ 
+
+</span>
+<span class="title">
+prgmr
+
+</span>
+</span>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+<div id="pagebody">
+
+<div id="content">
+<p>We choose an instance with the default Debian Lenny installation.</p>
+
+<h1>Base system</h1>
+
+<pre><code>ssh-keygen -t rsa  # send ~/.ssh/id_rsa.pub to prgmr
+ssh -i ~/.ssh/id_rsa username@stone.prgmr.com  # username, stone: can be something else
+</code></pre>
+
+<p>We are now in the console menu. Choose 1 to login as root using password 'password'. We start by upgrading to Debian Squeeze.</p>
+
+<pre><code>passwd
+aptitude
+# go to preferences (ctrl+t)
+# disable automatic installation of recommended packages
+# update
+# upgrade
+sed -i s/lenny/squeeze/g /etc/apt/sources.list
+aptitude dist-upgrade
+# repeat if necessary
+# don't install the new grub!
+aptitude install grub-legacy
+update-grub
+# make sure /boot/grub/menu.lst looks sane
+shutdown -r now
+# hope that the system comes up again
+# login again from the console menu
+aptitude dist-upgrade
+# this extra dist-upgrade run is probably not needed
+</code></pre>
+
+<p>Now that we have successfully upgraded to Squeeze, we add the first user and disable root.</p>
+
+<pre><code>adduser martijn
+addgroup admin
+adduser martijn admin
+aptitude install sudo
+echo '%admin ALL=(ALL) ALL' &gt;&gt; /etc/sudoers
+# try to login as 'martijn' (at username.xen.prgmr.com)
+sudo -l
+# if we are ok, logout as root and disable root
+sudo passwd -l root
+</code></pre>
+
+<p>Configure aptitude.</p>
+
+<pre><code>echo 'aptitude::Get-Root-Command "sudo:/usr/bin/sudo";' &gt; /etc/apt/apt.conf
+aptitude
+# go to preferences (ctrl+t)
+# disable automatic installation of recommended packages
+</code></pre>
+
+<p>Install some packages.</p>
+
+<pre><code>aptitude install emacs bash-completion screen subversion git htop
+</code></pre>
+
+<p>Get some dot files.</p>
+
+<pre><code>svn co &#036;SVNURL .home
+ln -s ~martijn/.home/.bashrc
+ln -s ~martijn/.home/.inputrc
+ln -s ~martijn/.home/.emacs
+ln -s ~martijn/.home/.profile
+ln -s ~martijn/.home/.screenrc
+ln -s ~martijn/.home/bin
+</code></pre>
+
+<h1>Security</h1>
+
+<p>Run sshd on another port (well, this is not really security, but to keep our logs human-readable).</p>
+
+<pre><code>sed -i 's/Port 22/Port 404/' /etc/ssh/sshd_config
+</code></pre>
+
+<p>And install denyhosts.</p>
+
+<p>We use the very simple iptables frontend ufw.</p>
+
+<pre><code>aptitude install ufw
+sed -i s/22/404/g /etc/ufw/applications.d/openssh-server
+ufw default deny
+ufw allow OpenSSH
+ufw enable
+</code></pre>
+
+<h1>nginx</h1>
+
+<p>We want newer nginx from testing, so we add the testing repository to our sources and use pinning to set Squeeze as default repository.</p>
+
+<pre><code>echo 'deb http://ftp.us.debian.org/debian testing main' &gt;&gt; /etc/apt/sources.list
+echo "Package: *
+Pin: release n=squeeze
+Pin-Priority: 900
+
+Package: *
+Pin: release a=testing
+Pin-Priority: 100" &gt; /etc/apt/preferences
+</code></pre>
+
+<p>The nginx-light package only exists in testing, so it can be installed just by name.</p>
+
+<pre><code>aptitude install nginx-light
+sed -i 's/worker_processes 4/worker_processes 1/' /etc/nginx/nginx.conf
+</code></pre>
+
+<p>Update: actually, we rebuild this package with the ngx_cache_purge module included, see the WordPress section below.</p>
+
+<p>Todo: restrictions.conf, virtual hosts with catchall</p>
+
+<h1>PHP</h1>
+
+<p>We want php5-fpm which is not in Debian (not even experimental at this moment). We get it from the Dotdeb repository.</p>
+
+<pre><code>echo "deb http://packages.dotdeb.org squeeze all" &gt;&gt; /etc/apt/sources.list
+</code></pre>
+
+<p>Update the pinning settings in /etc/apt/preferences to give Dotdeb lowest priority, except for our PHP packages.</p>
+
+<pre><code>Package: *
+Pin: release n=squeeze
+Pin-Priority: 900
+
+Package: *
+Pin: release a=testing
+Pin-Priority: 200
+
+Package: *
+Pin: origin packages.dotdeb.org
+Pin-Priority: 100
+
+Package: php5-common php5-fpm php5-mysql php5-gd
+Pin: origin packages.dotdeb.org
+Pin-Priority: 900
+</code></pre>
+
+<p>Now install the packages we need.</p>
+
+<pre><code>aptitude install php5-common php5-fpm php5-mysql php5-gd
+</code></pre>
+
+<h1>MySQL</h1>
+
+<p>Have a look at /usr/share/doc/mysql-server-5.1/examples for inspiration.</p>
+
+<pre><code>aptitude install mysql-server mysql-client
+echo skip-innodb &gt;&gt; /etc/mysql/my.cnf  # and edit some memory settings
+</code></pre>
+
+<h1>Wordpress</h1>
+
+<p>Our WordPress setup is summarized as:</p>
+
+<ul>
+<li>We track WordPress releases using Subversion and keep our own small set of modifications.</li>
+<li>Use nginx as webserver.</li>
+<li>Requests for PHP are passed to php5-fpm using fastcgi.</li>
+<li>The fastcgi forwards are cached by nginx.</li>
+<li>Cached items can be purged by using ngx_cache_purge module.</li>
+<li>On post publishing, relevant cached items are purged using Nginx Proxy Cache Purge plugin for WordPress.</li>
+</ul>
+
+<p>Before re-syncing the database with Dreamhost database, upgrade Dreamhost wordpress to same version.</p>
+
+<pre><code>http://blogs.sitepoint.com/2010/11/19/lightning-fast-wordpress-with-php-fpm-and-nginx/
+http://wordpress.org/support/topic/nginx-php-fpm-php-apc-wordpress-multisite-subdirectory-wp-super-cache
+http://lekkernerden.nl/2011/02/php5-fpm-php5-apc-segfault/
+http://news.ycombinator.com/item?id=2208760
+http://forum.slicehost.com/comments.php?DiscussionID=5099
+http://wiki.nginx.org/Pitfalls
+http://wordpress.org/extend/plugins/nginx-compatibility/
+http://danielmiessler.com/blog/optimizing-wordpress-with-nginx-varnish-w3-total-cache-amazon-s3-and-memcached
+http://wordpress.org/extend/plugins/nginx-proxy-cache-integrator/
+http://wordpress.org/extend/plugins/nginx-proxy-cache-purge/
+http://tonykwon.com/2010/12/nginx-fastcgi_cache-caveat/
+http://forum.linode.com/viewtopic.php?p=34066&amp;sid=5330e9d40f9733381e41accb2ad112e1#34077
+http://www.graq.co.uk/2010/12/super-fast-wordpress-nginx-caching-configuration/
+http://wordpress.org/extend/plugins/nginx-manager/
+http://wordpress.org/extend/plugins/auto-image-resizer/
+</code></pre>
+
+<p>We mostly follow <a href="http://codex.wordpress.org/Installing/Updating_WordPress_with_Subversion#Tracking_Stable_Versions">these steps</a>.</p>
+
+<p>Todo: mail</p>
+
+<p>Backup WordPress SVN checkout without upload dir:</p>
+
+<pre><code>rsync -a --exclude wp-content/uploads wordpress/ wordpress-3.0.5
+</code></pre>
+
+<p>Build nginx-light with ngx<em>cache</em>purge module (remember not to do this on the live server):</p>
+
+<pre><code>aptitude install build-essential devscripts
+aptitude build-dep nginx-light
+apt-get source nginx-light
+cd nginx-0.8.54/debian/modules
+wget http://labs.frickle.com/files/ngx_cache_purge-1.2.tar.gz
+tar -zxvf ngx_cache_purge-1.2.tar.gz
+cd ..
+emacs rules  # add ngx_cache_purge-1.2 to modules
+cd ..
+dch -i  # Call this version 0.8.54-3.prgmr or something
+debuild -us -uc
+</code></pre>
+
+<h1>Planet</h1>
+
+<p>See http://intertwingly.net/code/venus/</p>
+
+<pre><code>aptitude install python-chardet python-genshi python-html5lib \
+  python-htmltmpl python-httplib2 python-librdf python-libxml2 \
+  python-libxslt1 python-lxml python-utidylib
+</code></pre>
+
+<p>Note: <a href="http://www.jpichon.net/blog/2010/06/installing-planet-venus/">don't install python-beautifulsoup</a>.</p>
+
+<pre><code>git clone https://github.com/rubys/venus.git
+python venus/runtests.py
+</code></pre>
+
+<h1>Services to migrate from the old system</h1>
+
+<ul>
+<li>Subversion server (via http)</li>
+<li>rosanne.vermaat.name</li>
+<li>vondellaan.vermaat.name</li>
+<li>martijn.vermaat.name</li>
+<li>janny.vermaat.name</li>
+<li>deleesplank.nl</li>
+<li>MySQL server</li>
+<li>wiki.vermaat.name</li>
+<li>martijn.vermaat.name/planet</li>
+<li>martijn.vermaat.name/kiek</li>
+</ul>
+
+<h1>Links</h1>
+
+<p><a href="http://book.prgmr.com/mediawiki/index.php/Tips_for_setting_up_Debian">Tips for setting up Debian</a></p>
+
+</div>
+
+
+
+
+
+</div>
+
+<div id="footer" class="pagefooter">
+
+<div id="pageinfo">
+
+
+
+
+<div id="backlinks">
+Links:
+
+<a href="../">config</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="pagedate">
+Last edited <span class="date">di 17 mei 2011 09:12:44 CEST</span>
+<!-- Created <span class="date">di 17 mei 2011 09:12:44 CEST</span> -->
+</div>
+
+</div>
+
+
+<!-- from wiki -->
+</div>
+
+</div>
+
+</body>
+</html>

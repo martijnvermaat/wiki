@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>melissa</title>
+
+<link rel="stylesheet" href="../../style.css" type="text/css" />
+
+<link rel="stylesheet" href="../../local.css" type="text/css" />
+
+
+
+
+
+</head>
+<body>
+
+<div class="page">
+
+<div class="pageheader">
+<div class="header">
+<span>
+<span class="parentlinks">
+
+<a href="../../">wiki</a>/ 
+
+<a href="../">config</a>/ 
+
+</span>
+<span class="title">
+melissa
+
+</span>
+</span>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+<div id="pagebody">
+
+<div id="content">
+<p>Desktop PC in <a href="../sommelsdijk/">sommelsdijk</a> with Ubuntu Gutsy Gibbon 7.10.</p>
+
+<p>Users:</p>
+
+<ul>
+<li>Janny, sudoer</li>
+<li>Aat</li>
+<li>Derk</li>
+<li>(Lennert)</li>
+<li>(Rosanne)</li>
+<li>(Martijn, sudoer)</li>
+</ul>
+
+<h1>Hardware</h1>
+
+<ul>
+<li>19" Philips 190S7FS TFT</li>
+<li>AMD Duron 750 MHz</li>
+<li>640 MB RAM</li>
+<li>Matrox G450 AGP</li>
+<li>160 GB Maxtor 6G160P0 ATA</li>
+<li>PLEXTOR PX-W5224A ATAPI CD/DVD-ROM</li>
+<li>Brother HL-1430 Laser Printer (USB connected)</li>
+</ul>
+
+<h1>System configuration</h1>
+
+<h2>Partitioning</h2>
+
+<p>One 160 GB harddisk on /dev/hda:</p>
+
+<pre><code>/dev/hda1 mounted as /boot (220 MB)
+/dev/hda2 LVM volume group (rest of 160 GB)
+</code></pre>
+
+<p>The LVM volume group contains LVM volumes:</p>
+
+<pre><code>/dev/mapper/lvm--group-lvm--root    mounted as / (8 GB)
+/dev/mapper/lvm--group-lvm--home    mounted as /home (118 GB)
+/dev/mapper/lvm--group-lvm--backup  mounted as /vermaat (23 GB)
+/dev/mapper/lvm--group-lvm--swap    (800 MB)
+</code></pre>
+
+<h2>Sound</h2>
+
+<p>Install 'aumix' to adjust the volume of the sound chip.</p>
+
+<h2>Printer</h2>
+
+<p>While te printer generally works, there have always been troubles with the USB connection. See this bug: <a href="https://bugs.launchpad.net/ubuntu/dapper/+source/cupsys/+bug/57050">Brother HL-1430 USB printer will only print once</a>. The fixes in this bug report also seem to work for now. Some other notes on USB printers which lose the connection are in <a href="http://uwstopia.nl/blog/2007/11/getting-my-samsung-ml-2010-printer-to-work">this report</a>, but I never used them.</p>
+
+<h2>VMWare Player</h2>
+
+<p>We use VMWare Player to run some Windows applications, but because it was broken the package was removed from Gutsy. Updated packages can be found in <a href="http://ppa.launchpad.net/cschieli/ubuntu/pool/multiverse/v/vmware-player/">Cedric Schieli's PPA</a>.</p>
+
+<h1>User configuration</h1>
+
+<h2>Shared data</h2>
+
+<p>The /vermaat partition is shared by adding all users to the 'vermaat'
+group. We make sure everything in /vermaat is owned by 'vermaat' and
+readable and writable for all group members.</p>
+
+<p><a href="http://svn.vermaat.name/conf/home/melissa/bin/shared-permissions">This</a> script is executed by root every few hours.</p>
+
+<p>The shared F-Spot database and photos are also stored on this partition
+and used as described on <a href="../../f-spot/">f-spot</a>.</p>
+
+<h1>Backups</h1>
+
+<p>TODO</p>
+
+</div>
+
+
+
+
+
+</div>
+
+<div id="footer" class="pagefooter">
+
+<div id="pageinfo">
+
+
+
+
+<div id="backlinks">
+Links:
+
+<a href="../christina/">christina</a>
+
+<a href="../">config</a>
+
+<a href="../sommelsdijk/">sommelsdijk</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="pagedate">
+Last edited <span class="date">di 17 mei 2011 09:12:44 CEST</span>
+<!-- Created <span class="date">di 17 mei 2011 09:12:44 CEST</span> -->
+</div>
+
+</div>
+
+
+<!-- from wiki -->
+</div>
+
+</div>
+
+</body>
+</html>

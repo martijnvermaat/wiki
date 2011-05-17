@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>vmware tools</title>
+
+<link rel="stylesheet" href="../style.css" type="text/css" />
+
+<link rel="stylesheet" href="../local.css" type="text/css" />
+
+
+
+
+
+</head>
+<body>
+
+<div class="page">
+
+<div class="pageheader">
+<div class="header">
+<span>
+<span class="parentlinks">
+
+<a href="../">wiki</a>/ 
+
+</span>
+<span class="title">
+vmware tools
+
+</span>
+</span>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+<div id="pagebody">
+
+<div id="content">
+<p>Instructions for install VMWare Tools on an Ubuntu guest OS (on VMWare Player).</p>
+
+<p>Get VMWare Tools from the VMWare Workstation image. For now (Ubuntu Dapper) a patch is needed.</p>
+
+<pre><code>apt-get install build-essential linux-headers-`uname -r`
+</code></pre>
+
+<p>Get VMware Workstation for Linux.</p>
+
+<pre><code>tar -ztvf VMware-works....tar.gz | grep -i linux.iso
+tar -zxvf VMware-works....tar.gz vmware-distrib/.../linux.iso
+mkdir /tmp/vmware-tools
+mount -o loop vmware-distrib/.../linux.iso /tmp/vmware-tools
+</code></pre>
+
+<p>Now unpack VMware Tools and install. Don't run vmware-config-tools.pl yet.</p>
+
+<pre><code>wget http://paradiz.free.fr/vmwaretools/vmware-tools-any-update2.tar.gz
+wget http://paradiz.free.fr/vmwaretools/patch.txt
+tar -zxvf vmware-tools-any-update2.tar.gz
+cd vmware-tools-any-update2/
+./runme.pl
+</code></pre>
+
+<p>Again, don't run vmware-config-tools.pl yet.</p>
+
+<pre><code>cd /usr/bin
+patch vmware-config-tools.pl /tmp/patch.txt
+./vmware-config-tools.pl
+</code></pre>
+
+<p>To use the VMWare mouse driver:</p>
+
+<pre><code>perl -p -i.bak -e 's/\"mouse\"/\"vmmouse\"/' /etc/X11/xorg.conf
+</code></pre>
+
+<p>(The patch doesn't seem to be up-to-date with the current vmware-config-tools.pl unfortunately.)</p>
+
+<ul>
+<li><a href="http://www.brandonhutchinson.com/Installing_VMware_Tools_with_VMware_Player.html">Installing VMware Tools with VMware Player</a></li>
+<li><a>Patch for VMWare Tools on Ubuntu</a></li>
+<li><a href="http://www.vmware.com/download">VMware Workstation</a></li>
+</ul>
+
+</div>
+
+
+
+
+
+</div>
+
+<div id="footer" class="pagefooter">
+
+<div id="pageinfo">
+
+
+
+
+<div id="backlinks">
+Links:
+
+<a href="../">index</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="pagedate">
+Last edited <span class="date">di 17 mei 2011 09:12:44 CEST</span>
+<!-- Created <span class="date">di 17 mei 2011 09:12:44 CEST</span> -->
+</div>
+
+</div>
+
+
+<!-- from wiki -->
+</div>
+
+</div>
+
+</body>
+</html>
