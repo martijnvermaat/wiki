@@ -65,7 +65,7 @@ Run sshd on another port (well, this is not really security, but to keep our log
 
     sed -i 's/Port 22/Port 404/' /etc/ssh/sshd_config
 
-And install denyhosts.
+Disable root login and install denyhosts.
 
 We use the very simple iptables frontend ufw.
 
