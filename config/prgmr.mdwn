@@ -184,6 +184,24 @@ Build nginx-light with ngx_cache_purge module (remember not to do this on the li
     dch -i  # Call this version 0.8.54-3.prgmr or something
     debuild -us -uc
 
+*Update:*
+
+Nowadays, a sufficiently up-to-date nginx version is in squeeze-backports and
+the source package already includes the ngx_cache_purge module (it's just not
+enabled for the nginx-light build). So the above instructions can now be
+reduced to:
+
+    aptitude install build-essential devscripts
+    aptitude -t squeeze-backports build-dep nginx-light
+    apt-get t squeeze-backports source nginx-light
+    cd nginx-1.2.1/debian
+    emacs rules  # add nginx-cache-purge to nginx-light build
+    cd ..
+    dch -i  # Call this version 1.2.1.prgmr or something
+    debuild -us -uc
+
+(But first add the squeeze-backports repository of course.)
+
 # Planet
 
 See http://intertwingly.net/code/venus/
