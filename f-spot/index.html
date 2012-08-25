@@ -15,6 +15,7 @@
 
 
 
+
 </head>
 <body>
 
@@ -35,6 +36,8 @@ f-spot
 </span>
 
 </div>
+
+
 
 
 
@@ -75,7 +78,7 @@ connection.commit()
 <p>Update: sqlite3 features a replace function, and latest F-Spot seems to use a 'uri'
 column instead of a 'directory_path' column, so the above would become:</p>
 
-<pre><code>martijn@daphne:~&#036; sqlite3 photos.db 
+<pre><code>martijn@daphne:~$ sqlite3 photos.db 
 SQLite version 3.5.9
 Enter ".help" for instructions
 sqlite&gt; update photos set uri = replace(uri,'file:///home/vermaat/','file:///vermaat/');
@@ -96,9 +99,9 @@ writable for all users and has the guid bit set. Move existing photos there and 
 the photos.db database as explained above. Move the photos.db database to the shared
 directory.</p>
 
-<pre><code>martijn@melissa:/vermaat&#036; ls -l
+<pre><code>martijn@melissa:/vermaat$ ls -l
 drwxrwsr-x 57 martijn vermaat       4096 2007-05-13 17:16 photos
-martijn@melissa:/vermaat&#036; ls -l photos/photos.db
+martijn@melissa:/vermaat$ ls -l photos/photos.db
 -rw-rw---- 1 martijn vermaat 236544 2007-05-13 17:09 photos/photos.db
 </code></pre>
 
@@ -119,7 +122,7 @@ new f-spot binary with database and photo locations as arguments:</p>
 <p>Create a new /usr/bin/f-spot with the following contents:</p>
 
 <pre><code>#!/bin/sh
-/usr/bin/f-spot.real -b /vermaat/photos -p /vermaat/photos "&#036;{@}"
+/usr/bin/f-spot.real -b /vermaat/photos -p /vermaat/photos "${@}"
 </code></pre>
 
 <p>This should sort-of work in a multi-user environment.</p>
@@ -135,6 +138,8 @@ new f-spot binary with database and photo locations as arguments:</p>
 <div id="footer" class="pagefooter">
 
 <div id="pageinfo">
+
+
 
 
 
@@ -155,8 +160,8 @@ Links:
 
 
 <div class="pagedate">
-Last edited <span class="date">di 17 mei 2011 09:12:44 CEST</span>
-<!-- Created <span class="date">di 17 mei 2011 09:12:44 CEST</span> -->
+Last edited <span class="date">Sat 25 Aug 2012 05:19:51 PM CEST</span>
+<!-- Created <span class="date">Sat 25 Aug 2012 05:19:51 PM CEST</span> -->
 </div>
 
 </div>

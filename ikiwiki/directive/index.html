@@ -15,6 +15,7 @@
 
 
 <meta name="robots" content="noindex, follow" />
+
 </head>
 <body>
 
@@ -37,6 +38,8 @@ directive
 </span>
 
 </div>
+
+
 
 
 
@@ -73,13 +76,27 @@ bar="supercalifragilisticexpialidocious" baz=11]]
 
 <p>Also, multiple lines of <em>quoted</em> text can be used for a value.
 To allow quote marks inside the quoted text, delimit the block
-of text with triple-quotes:</p>
+of text with triple-double-quotes or triple-single-quotes:</p>
 
 <pre><code>[[!directive  text="""
 1. "foo"
 2. "bar"
 3. "baz"
-"""]]
+""" othertext='''
+1. 'quux'
+2. "foo"
+''']]
+</code></pre>
+
+<p>If you want to put text with triple quotes into a parameter value, you can
+use perl-style here-doc syntax, even nesting it like this:</p>
+
+<pre><code>[[!directive  text=&lt;&lt;OUTER
+[[!otherdirective &lt;&lt;INNER
+inner text
+INNER]]
+outer text
+OUTER]]
 </code></pre>
 
 <p>ikiwiki also has an older syntax for directives, which requires a space in
@@ -101,6 +118,8 @@ the older syntax, if the <code>prefix_directives</code> option is disabled.</p>
 <div id="footer" class="pagefooter">
 
 <div id="pageinfo">
+
+
 
 
 
@@ -127,8 +146,8 @@ Links:
 
 
 <div class="pagedate">
-Last edited <span class="date">di 25 jan 2011 09:19:37 CET</span>
-<!-- Created <span class="date">di 25 jan 2011 09:19:37 CET</span> -->
+Last edited <span class="date">Fri 13 May 2011 06:06:00 PM CEST</span>
+<!-- Created <span class="date">Fri 13 May 2011 06:06:00 PM CEST</span> -->
 </div>
 
 </div>

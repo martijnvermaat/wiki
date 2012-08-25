@@ -15,6 +15,7 @@
 
 
 
+
 </head>
 <body>
 
@@ -40,6 +41,8 @@ ssh through nat
 
 
 
+
+
 </div>
 
 
@@ -53,12 +56,12 @@ ssh through nat
 
 <p>On 'client':</p>
 
-<pre><code>&#036; ssh -o TCPKeepAlive=yes -R 2022:localhost:22 natuser@server 'while :; do sleep 86400; done'
+<pre><code>$ ssh -o TCPKeepAlive=yes -R 2022:localhost:22 natuser@server 'while :; do sleep 86400; done'
 </code></pre>
 
 <p>On 'server':</p>
 
-<pre><code>&#036; ssh -p 2022 localhost
+<pre><code>$ ssh -p 2022 localhost
 </code></pre>
 
 <p>From <a href="http://www.linuxgazette.com/node/2248">http://www.linuxgazette.com/node/2248</a></p>
@@ -80,6 +83,8 @@ ssh through nat
 
 
 
+
+
 <div id="backlinks">
 Links:
 
@@ -94,8 +99,8 @@ Links:
 
 
 <div class="pagedate">
-Last edited <span class="date">di 17 mei 2011 09:12:44 CEST</span>
-<!-- Created <span class="date">di 17 mei 2011 09:12:44 CEST</span> -->
+Last edited <span class="date">Sat 25 Aug 2012 05:19:51 PM CEST</span>
+<!-- Created <span class="date">Sat 25 Aug 2012 05:19:51 PM CEST</span> -->
 </div>
 
 </div>

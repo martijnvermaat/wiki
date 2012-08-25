@@ -15,6 +15,7 @@
 
 
 
+
 </head>
 <body>
 
@@ -40,6 +41,8 @@ convert multimedia
 
 
 
+
+
 </div>
 
 
@@ -52,16 +55,16 @@ convert multimedia
 <p>Convert all WMA files in this directory to WAV files:</p>
 
 <pre><code>for i in *.wma; do
-  mplayer -vc null -vo null -ao pcm:waveheader "&#036;i";
-  mv audiodump.wav "`basename "&#036;i" .wma`.wav";
+  mplayer -vc null -vo null -ao pcm:waveheader "$i";
+  mv audiodump.wav "`basename "$i" .wma`.wav";
 done;
 </code></pre>
 
 <h1>M4A to OGG</h1>
 
 <pre><code>for i in *.m4a; do
-  echo "Converting: &#036;{i%.m4a}.ogg"
-  faad -o - "&#036;i" | oggenc -b 256 -a ARTIST -d DATE -l ALBUM -t TITLE -o "&#036;{i%.m4a}.ogg" -
+  echo "Converting: ${i%.m4a}.ogg"
+  faad -o - "$i" | oggenc -b 256 -a ARTIST -d DATE -l ALBUM -t TITLE -o "${i%.m4a}.ogg" -
 done
 </code></pre>
 
@@ -89,6 +92,8 @@ oggenc -b 256 -a Artist -d Date -l Album -t Title result*.wav
 
 
 
+
+
 <div id="backlinks">
 Links:
 
@@ -103,8 +108,8 @@ Links:
 
 
 <div class="pagedate">
-Last edited <span class="date">di 17 mei 2011 09:12:44 CEST</span>
-<!-- Created <span class="date">di 17 mei 2011 09:12:44 CEST</span> -->
+Last edited <span class="date">Sat 25 Aug 2012 05:19:51 PM CEST</span>
+<!-- Created <span class="date">Sat 25 Aug 2012 05:19:51 PM CEST</span> -->
 </div>
 
 </div>

@@ -15,6 +15,7 @@
 
 
 
+
 </head>
 <body>
 
@@ -37,6 +38,8 @@ prgmr
 </span>
 
 </div>
+
+
 
 
 
@@ -107,7 +110,7 @@ aptitude
 
 <p>Get some dot files.</p>
 
-<pre><code>svn co &#036;SVNURL .home
+<pre><code>svn co $SVNURL .home
 ln -s ~martijn/.home/.bashrc
 ln -s ~martijn/.home/.inputrc
 ln -s ~martijn/.home/.emacs
@@ -123,7 +126,7 @@ ln -s ~martijn/.home/bin
 <pre><code>sed -i 's/Port 22/Port 404/' /etc/ssh/sshd_config
 </code></pre>
 
-<p>And install denyhosts.</p>
+<p>Disable root login, disable password logins, and install denyhosts.</p>
 
 <p>We use the very simple iptables frontend ufw.</p>
 
@@ -210,6 +213,7 @@ echo skip-innodb &gt;&gt; /etc/mysql/my.cnf  # and edit some memory settings
 <li>On post publishing, relevant cached items are purged using Nginx Proxy Cache Purge plugin for WordPress.</li>
 </ul>
 
+
 <p>Before re-syncing the database with Dreamhost database, upgrade Dreamhost wordpress to same version.</p>
 
 <pre><code>http://blogs.sitepoint.com/2010/11/19/lightning-fast-wordpress-with-php-fpm-and-nginx/
@@ -238,7 +242,7 @@ http://wordpress.org/extend/plugins/auto-image-resizer/
 <pre><code>rsync -a --exclude wp-content/uploads wordpress/ wordpress-3.0.5
 </code></pre>
 
-<p>Build nginx-light with ngx<em>cache</em>purge module (remember not to do this on the live server):</p>
+<p>Build nginx-light with ngx_cache_purge module (remember not to do this on the live server):</p>
 
 <pre><code>aptitude install build-essential devscripts
 aptitude build-dep nginx-light
@@ -252,6 +256,25 @@ cd ..
 dch -i  # Call this version 0.8.54-3.prgmr or something
 debuild -us -uc
 </code></pre>
+
+<p><em>Update:</em></p>
+
+<p>Nowadays, a sufficiently up-to-date nginx version is in squeeze-backports and
+the source package already includes the ngx_cache_purge module (it's just not
+enabled for the nginx-light build). So the above instructions can now be
+reduced to:</p>
+
+<pre><code>aptitude install build-essential devscripts
+aptitude -t squeeze-backports build-dep nginx-light
+apt-get t squeeze-backports source nginx-light
+cd nginx-1.2.1/debian
+emacs rules  # add nginx-cache-purge to nginx-light build
+cd ..
+dch -i  # Call this version 1.2.1.prgmr or something
+debuild -us -uc
+</code></pre>
+
+<p>(But first add the squeeze-backports repository of course.)</p>
 
 <h1>Planet</h1>
 
@@ -268,10 +291,6 @@ debuild -us -uc
 python venus/runtests.py
 </code></pre>
 
-<h1>Wiki</h1>
-
-<p>Ikiwiki, hosted on GitHub Pages. See http://ikiwiki.info/tips/github/ and http://pages.github.com</p>
-
 <h1>Services to migrate from the old system</h1>
 
 <ul>
@@ -286,6 +305,7 @@ python venus/runtests.py
 <li>martijn.vermaat.name/planet</li>
 <li>martijn.vermaat.name/kiek</li>
 </ul>
+
 
 <h1>Links</h1>
 
@@ -306,6 +326,8 @@ python venus/runtests.py
 
 
 
+
+
 <div id="backlinks">
 Links:
 
@@ -320,8 +342,8 @@ Links:
 
 
 <div class="pagedate">
-Last edited <span class="date">di 17 mei 2011 12:43:46 CEST</span>
-<!-- Created <span class="date">di 17 mei 2011 09:12:44 CEST</span> -->
+Last edited <span class="date">Sat 25 Aug 2012 05:54:48 PM CEST</span>
+<!-- Created <span class="date">Sat 25 Aug 2012 05:54:48 PM CEST</span> -->
 </div>
 
 </div>
